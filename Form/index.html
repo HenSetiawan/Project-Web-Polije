@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <main>
+        <form action="./home.html" method="post">
+        <h1>FORM DATA KASIR</h1>
+        <table>
+            <tr>
+                <td>ID KASIR :</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>NAMA KASIR :</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>ALAMAT KASIR :</td>
+                <td>
+                    <select id="alamat" name="alamat">
+                        <option value="jember">JEMBER</option>
+                        <option value="jember">BONDOWOSO</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>TELP</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>STATUS</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">LAKI_LAKI</label><br>
+                </td>
+                <td>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">PEREMPUAN</label><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>USERNAME</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>PASSWORD</td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="KIRIM">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </main>
+</body>
+</html>
