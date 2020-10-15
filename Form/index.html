@@ -3,71 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORM</title>
+    <title>Form dengan HTML</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <main>
-        <form action="./home.html" method="post">
-        <h1>FORM DATA KASIR</h1>
-        <table>
-            <tr>
-                <td>ID KASIR :</td>
-                <td><input type="text"></td>
+    <center><h1>FORM DATA KASIR</h1></center>
+    <form action="target.html">
+        <table border="0">
+            <tr> 
+                <td>ID KASIR</td>
+                <td>:</td>
+                <td><input type="text" class="input" placeholder="id"></td>
             </tr>
             <tr>
-                <td>NAMA KASIR :</td>
-                <td><input type="text"></td>
+                <td>NAMA KASIR</td>
+                <td>:</td>
+                <td><input type="text" class="input" placeholder="nama"></td>
             </tr>
             <tr>
-                <td>ALAMAT KASIR :</td>
+                <td>ALAMAT KASIR</td>
+                <td>:</td>
                 <td>
-                    <select id="alamat" name="alamat">
-                        <option value="jember">JEMBER</option>
-                        <option value="jember">BONDOWOSO</option>
+                    <select name="alamat" id="">
+                        <option>JEMBER</option>
+                        <option>BONDOWOSO</option>
+                        <option>BANYUWANGI</option>
+                        <Option>SITUBONDO</Option>
                     </select>
                 </td>
             </tr>
-
             <tr>
-                <td>TELP</td>
-                <td>
-                    <input type="text">
-                </td>
+                <td>TELEPON</td>
+                <td>:</td>
+                <td><Input type="number" class="input" placeholder="telp"></Input></td>
             </tr>
-
             <tr>
                 <td>STATUS</td>
-                <td>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">LAKI_LAKI</label><br>
-                </td>
-                <td>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">PEREMPUAN</label><br>
-                </td>
+                <td>:</td>
+                <td><input type="radio" name="pilih">PRIA <input type="radio" name="pilih">WANITA</td>
             </tr>
-
             <tr>
                 <td>USERNAME</td>
-                <td>
-                    <input type="text">
-                </td>
+                <td>:</td>
+                <td><input type="text" class="input" placeholder="user name"></td>
             </tr>
-
             <tr>
                 <td>PASSWORD</td>
-                <td>
-                    <input type="password">
-                </td>
+                <td>:</td>
+                <td><input type="password" class="input" placeholder="password"></td>
             </tr>
-
             <tr>
-                <td>
-                    <input type="submit" value="KIRIM">
-                </td>
+                <td colspan="3"><input type="submit" value="Kirim" id="submit"></td>
             </tr>
         </table>
     </form>
-    </main>
 </body>
 </html>
