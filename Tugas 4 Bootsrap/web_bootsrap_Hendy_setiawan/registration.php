@@ -7,14 +7,14 @@ $gender='';
 $agama='';
 $biografi='';
 
-  if(isset($_GET['submit'])){
+  if(isset($_POST['submit'])){
 
-    $name=$_GET['name'];
-    $username=$_GET['username'];
-    $email=$_GET['email'];
-    $gender=$_GET['gender'];
-    $agama=$_GET['agama'];
-    $biografi=$_GET['biografi'];
+    $name=$_POST['name'];
+    $username=$_POST['username'];
+    $email=$_POST['email'];
+    $gender=$_POST['gender'];
+    $agama=$_POST['agama'];
+    $biografi=$_POST['biografi'];
 
   }
 
@@ -258,7 +258,7 @@ $biografi='';
     </div>
 
     <div class="card-body">
-      <form action="">
+      <form action="" method="POST">
         <div class="form-group">
           <input type="text" name="name" id="name" class="form-control form-control-user" placeholder="Nama Anda" required autocomplete="of">
         </div>
