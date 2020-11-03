@@ -10,7 +10,5 @@
 		echo "<p>Belajar PHP hingga jadi master</p>";
 	 ?>
 
-
-
 </body>
 </html>
