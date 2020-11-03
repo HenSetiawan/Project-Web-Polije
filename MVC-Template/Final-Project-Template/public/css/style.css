@@ -1,0 +1,66 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-cari{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+}
+
+.title-cari~p,.card-text,.price-kos,.location-kos{
+    font-size: 0.8em;
+}
+
+.btn-nav{
+    border: none !important;
+}
+
+.main-header,.btn-tambah{
+    margin-top: 12vh !important;
+}
+
+.span-jenis-kos{
+    font-size: 0.8em !important;
+}
+
+.main-search{
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+     height: 44px;
+}
+.icon-search{
+    display: inline;
+}
+.keyword-input{
+    border: none;
+    width: 90%;
+    height: 100%;
+    font-size: .8em;
+    display: inline-block;
+}
+
+.keyword-input:focus{
+    outline: none;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .btn-nav{
+        border: none !important;
+        display: none !important;
+    }
+
+    .card{
+        width: 17rem !important;
+    }
+    
+  }
+
+
+
+
+
