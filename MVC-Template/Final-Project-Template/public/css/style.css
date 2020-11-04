@@ -44,8 +44,66 @@
     outline: none;
 }
 
+.btn-login{
+    text-align: center;
+}
+
+.exit-login,.exit-login+span{
+    font-size: .8em;
+    
+}
+
+.main-login{
+    margin-top: 12vh !important;
+}
 
 
+.login-title h2{
+    font-size: 1.2em;
+}
+
+.login-title p{
+    font-size: .8em;
+}
+
+
+.form-login ::placeholder{
+    font-size: .7em;
+
+}
+
+.form-login label{
+    font-size: .7em;
+    margin-left: 15px;
+
+}
+
+.option-login{
+    font-size: .8em;
+    margin-top: 20px;
+}
+
+
+.form-login input{
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+}
+
+.hero-login{
+    display: none !important;
+}
+
+.button-login button{
+    width: 330px !important;
+    margin-top: 15px;
+}
+
+
+.login-page img{
+    display: inline-block;
+    width: 50%;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -56,6 +114,38 @@
 
     .card{
         width: 17rem !important;
+    }
+
+    .navbar-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-login{
+        margin-top: 12vh !important;
+    }
+
+    .btn-login{
+        width: 100px !important;
+        height: 33px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-login{
+        display: inline-block !important;
+        background-color: #00BFA6;
+    }
+
+    .login-page{
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .login-page img{
+        display: inline-block;
+        width: 100%;
     }
     
   }

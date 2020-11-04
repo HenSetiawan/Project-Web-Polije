@@ -14,6 +14,7 @@
 
 <body>
 
+<!-- navbar home -->
 <div class="row-lg-12 fixed-top" >
  <div class="row ">
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
@@ -29,12 +30,14 @@
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Home </a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Blog</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">About</a>
+            <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a>
             </div>
         </div>
     </div>
     </nav>
     </div>
 </div>
+<!--end navbar home -->
 
     <!-- start container -->
 <div class="container">
