@@ -27,9 +27,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Home </a>
+            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Blog</a>
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">About</a>
+            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Tentang</a>
             <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a>
             </div>
         </div>

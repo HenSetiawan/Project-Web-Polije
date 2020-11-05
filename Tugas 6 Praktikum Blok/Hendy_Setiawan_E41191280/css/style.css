@@ -1,0 +1,71 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container-login{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+
+
+.title-login{
+    font-size: 1.1em;
+}
+
+.title-login+p,label,span,a{
+    font-size: 0.8em;
+}
+
+
+
+.input-item input{
+    border: none;
+    font-size: 0.8em;
+}
+
+.btn-login button{
+    width: 100%;
+}
+
+.hero-login{
+    display: none;
+}
+
+
+.home-page{
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home-page input{
+    font-size: .8em;
+}
+
+
+.hero-login img{
+    display: inline-block;
+    height: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .hero-login{
+        display: inline-block;
+        height: 100vh;
+        background-color: 	#5cb85c;
+    }
+
+    /* .main-login{
+        box-shadow: 0 0 0.3rem 0.2rem rgba(0, 0, 0, 0.15);
+    } */
+    
+  }
