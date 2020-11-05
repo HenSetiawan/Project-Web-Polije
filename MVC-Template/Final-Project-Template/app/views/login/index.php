@@ -35,6 +35,7 @@
 
 <!-- login page -->
     <div class="row">
+
          <!-- mobile login page -->
             <div class="col-md-4 login-page">
                 <div class="row">
