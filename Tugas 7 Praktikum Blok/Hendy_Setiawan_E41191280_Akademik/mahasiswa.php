@@ -5,7 +5,7 @@ require 'modelMahasiswa.php';
   $students=getAllDataStudents();
 
   if(isset($_POST['insert'])){
-    var_dump($_POST);
+    inserStudents($_POST);
   }
 
 if(isset($_POST['update'])){

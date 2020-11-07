@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<?=BASEURL;?>/public/font-awesome/css/all.css">
     <link rel="icon" href="<?=BASEURL;?>/public/image/kos.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title><?=$data['title']?></title>
 </head>
 
