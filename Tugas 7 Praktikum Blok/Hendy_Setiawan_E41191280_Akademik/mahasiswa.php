@@ -5,12 +5,12 @@ require 'modelMahasiswa.php';
   $students=getAllDataStudents();
 
   if(isset($_POST['insert'])){
-    inserStudents($_POST);
+    var_dump($_POST);
   }
 
 if(isset($_POST['update'])){
   $id=$_POST['id'];
-  updateDataById($id,$$_POST);
+  updateDataById($id,$_POST);
 }
 ?>
 
@@ -173,10 +173,10 @@ if(isset($_POST['update'])){
                     <label for="agame">Agama</label>
                     <select name="agama" class="form-control" id="agama">
                       <option value="islam" class="form-control">Islam</option>
-                      <option value="islam" class="form-control">Kristen</option>
-                      <option value="islam" class="form-control">Hindu</option>
-                      <option value="islam" class="form-control">Budha</option>
-                      <option value="islam" class="form-control">Kong Hu Cu</option>
+                      <option value="kristen" class="form-control">Kristen</option>
+                      <option value="hindu" class="form-control">Hindu</option>
+                      <option value="budha" class="form-control">Budha</option>
+                      <option value="kong hu cu" class="form-control">Kong Hu Cu</option>
                     </select>
 
                     <label for="username">Username</label>
