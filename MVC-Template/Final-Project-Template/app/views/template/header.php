@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?=BASEURL;?>/public/css/bootstrap.css">
     <link rel="stylesheet" href="<?=BASEURL;?>/public/css/style.css">
     <link rel="stylesheet" href="<?=BASEURL;?>/public/css/footer.css">
+    <link rel="stylesheet" href="<?=BASEURL;?>/public/css/blog.css">
     <link rel="stylesheet" href="<?=BASEURL;?>/public/font-awesome/css/all.css">
     <link rel="icon" href="<?=BASEURL;?>/public/image/kos.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Blog</a>
+            <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Tentang</a>
             <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a>
             </div>

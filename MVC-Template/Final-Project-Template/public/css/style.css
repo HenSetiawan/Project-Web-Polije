@@ -108,15 +108,19 @@
 }
 
 
+
+
+/*DIBAWAH INI CSS DEKSTOP  */
+
 @media only screen and (min-width: 768px) {
     .btn-nav{
         border: none !important;
         display: none !important;
     }
 
-    .card{
+    /* .card{
         width: 17rem !important;
-    }
+    } */
 
     .navbar-nav{
         display: flex;

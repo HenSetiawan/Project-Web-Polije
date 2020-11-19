@@ -2,7 +2,7 @@
 <div class="row justify-content-md-center main-header">
   <div class="col-md-6">
     <h2 class="title-cari">Mau cari kos di Bondowoso?</h1>
-    <p class="text-secondary ">Dapatkan infonya dan langsung sewa di PapiKos</p>
+    <p class="text-secondary ">Dapatkan infonya dan langsung sewa di KosKosang</p>
 
       <div class="input-group mt-5 mb-3 border main-search">
       <div class="input-group-prepend">

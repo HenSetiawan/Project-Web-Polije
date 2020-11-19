@@ -5,7 +5,7 @@
 <!-- end container -->
 
 <footer class="row">
-    <section class="col-md-4">
+    <section class="col-md-4 mt-4">
         <h5>Hubungi Kami</h5>
         <div class="media-sosial">
             <span><i class="fab fa-facebook"></i></span>
