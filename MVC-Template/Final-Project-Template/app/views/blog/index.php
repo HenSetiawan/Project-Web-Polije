@@ -1,5 +1,5 @@
 <div class="row mb-4 blog-container">
-    <div class="col-md-4 mt-3 ">
+    <div class="col-md-6 mt-3 ">
         <div class="card card-blog">
         <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -11,7 +11,7 @@
         </div>
     </div>
     
-    <div class="col-md-4 mt-3">
+    <div class="col-md-6 mt-3">
     <div class="card">
         <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="col-md-4 mt-3">
+    <div class="col-md-6 mt-3">
     <div class="card" >
         <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="col-md-4 mt-3">
+    <div class="col-md-6 mt-3">
     <div class="card" >
         <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="col-md-4 mt-3">
+    <div class="col-md-6 mt-3">
     <div class="card" >
         <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <div class="col-md-4 mt-3">
+    <div class="col-md-6 mt-3">
     <div class="card" >
         <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
