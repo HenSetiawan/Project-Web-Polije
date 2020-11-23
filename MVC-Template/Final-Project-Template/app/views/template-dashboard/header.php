@@ -57,9 +57,9 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link" href="<?=BASEURL;?>/dashboard_blog">
+        <i class="fas fa-pencil-alt"></i>
+          <span>Blogs</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
