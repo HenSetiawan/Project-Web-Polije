@@ -28,7 +28,7 @@
             <div class="navbar-nav">
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Tentang</a>
+            <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a>
             <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a>
             </div>
         </div>
