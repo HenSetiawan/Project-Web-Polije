@@ -16,7 +16,7 @@
 
     <section class="col-md-4 mt-4">
         <h5>KosKosang</h5>
-        <a href="" class="text-secondary">Tentang Kami</a>
+        <a href="<?=BASEURL;?>/about" class="text-secondary">Tentang Kami</a>
         <a href="" class="text-secondary">Promosikan kos anda</a>
     </section>
 

@@ -4,7 +4,8 @@ class About extends Controller{
 
     public function index()
     {
-        echo "tentang kami";
+        $data['title']="Cari Kos Mudah Dan Terpercaya";
+        $this->views('template/header',$data);
     }
 }
 
