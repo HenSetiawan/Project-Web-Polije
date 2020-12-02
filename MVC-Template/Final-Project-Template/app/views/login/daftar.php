@@ -16,7 +16,7 @@
 
     <!-- navbar login -->
     <div class="row-lg-12 fixed-top" >
-     <div class="row ">
+       <div class="row ">
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
             <div class="container ml-2 mr-2">
                 <a class="navbar-brand " href="<?=BASEURL;?>/home">
@@ -36,8 +36,8 @@
     <!-- login page -->
     <div class="row">
 
-     <!-- mobile login page -->
-     <div class="col-md-4 login-page">
+       <!-- mobile login page -->
+       <div class="col-md-4 login-page">
         <div class="row">
             <div class="col-md-6">
                 <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid mt-2">
@@ -46,8 +46,8 @@
 
         <div class="row login-title mt-3">
             <div class="col-md-12">
-                <h2 class="">Registrasi</h2>
-                <p class=" mt-2">Ayo segara daftarkan & bergabung di website kami</p>
+                <h2>Registrasi</h2>
+                <p class=" mt-3">Ayo segara daftarkan & bergabung di website kami</p>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
 
             <!-- First Name -->
             <div class="row form-login">
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <label for="first_name">Nama Depan</label>
                     <input type="text" name="firstname" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama depan anda" id="first_name">                
                 </div>
@@ -68,16 +68,17 @@
                 </div>
 
                 <!-- Gender -->
-                <label for="last_name" class="mt-2">Jenis Kelamin</label>  
-                  <div class="col-md-4 mt-2 ml-3">
+                <label for="last_name" class="mt-2">Jenis Kelamin</label> 
+                <div class="ml-2"> 
+                  <div class="col-md-6 mt-2">
                       <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
                       <label class="custom-control-label" for="customRadioInline1">Laki-Laki</label>
                   </div>
-                  <div class="col-md-4 mt-2 mb-1">
+                  <div class="col-md-6 mt-2 mb-1">
                       <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
                       <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
                   </div>
-               
+              </div>
 
               <!-- No Handphone -->
               <div class="col-md-12">
@@ -98,7 +99,7 @@
             </div>
         </div>
 
-        <div class="row mt-1 mb-3 button-login">
+        <div class="row mt-1 mb-4 button-login">
             <div class="col">
                 <button class="btn btn-success btn-sm rounded-pill">Daftar</button>
             </div>
