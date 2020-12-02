@@ -16,7 +16,7 @@
 
     <!-- navbar login -->
     <div class="row-lg-12 fixed-top" >
-       <div class="row ">
+     <div class="row ">
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
             <div class="container ml-2 mr-2">
                 <a class="navbar-brand " href="<?=BASEURL;?>/home">
@@ -36,8 +36,8 @@
     <!-- login page -->
     <div class="row">
 
-       <!-- mobile login page -->
-       <div class="col-md-4 login-page">
+     <!-- mobile login page -->
+     <div class="col-md-4 login-page">
         <div class="row">
             <div class="col-md-6">
                 <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid mt-2">
@@ -46,8 +46,8 @@
 
         <div class="row login-title mt-4">
             <div class="col-md-12">
-                <h2 class="">Login</h2>
-                <p class=" mt-3">Bagi kamu yang sudah terdaftar silahkan login</p>
+                <h2>Lupa Password</h2>
+                <p class=" mt-3">Gunakan email untuk melakukan lupa password</p>
             </div>
         </div>
 
@@ -58,28 +58,17 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="alamat@email" id="email">
                 </div>
-                <div class="col-md-12">
-                    <label for="password">Password</label>
-                    <input type="password" name="password"  class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="password" id="password">
+            </div>
+
+            <div class="row mt-3 button-login">
+                <div class="col">
+                    <button class="btn btn-success btn-sm rounded-pill">Lupa Password</button>
                 </div>
             </div>
 
             <div class="row option-login">
                 <div class="col ml-2">
-                    <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
-                </div>
-                <div class="col ml-5">
-                    <a href="<?=BASEURL?>/lupa_password" class="text-decoration-none">Lupa password</a>
-                </div>
-            </div>
-
-            <div class="row mt-5 mb-5 button-login">
-                <div class="col">
-                    <button class="btn btn-success btn-sm rounded-pill">Login</button>
-                </div>
-                <div class="col">
-                    <button class="btn btn-outline-success btn-sm rounded-pill" onclick="location.href='<?=BASEURL?>/daftar'" type="button">Daftar</button>
+                    <a href="<?=BASEURL?>/login" class="text-decoration-none">Kembali Ke halaman login</a>
                 </div>
             </div>
         </form>
@@ -89,7 +78,7 @@
 
     <!-- hero image desktop -->
     <div class="col-md-8 hero-login">
-        <img src="<?=BASEURL;?>/public/image/login.svg" class="img-fluid">
+        <img src="<?=BASEURL;?>/public/image/auth.svg" class="img-fluid">
     </div>
     <!--end hero image desktop -->
 </div>

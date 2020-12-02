@@ -8,7 +8,7 @@
       <div class="input-group-prepend">
         <i class="fas fa-search text-secondary pl-2 icon-search"></i>
       </div>
-      <input type="text" class="keyword-input pl-3" placeholder="masukan nama atau alamat" autocomplete="off">
+      <input type="text" class="keyword-input pl-3" placeholder="masukan nama atau alamat" autocomplete="off" autofocus>
     </div>
 
   </div>

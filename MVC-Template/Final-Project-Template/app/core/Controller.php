@@ -2,7 +2,7 @@
 
     class Controller{
 
-        protected  function views($path,$data=[]){
+        protected  function views($path, $data=[]){
             require_once './app/views/'.$path.'.php';
         }
 

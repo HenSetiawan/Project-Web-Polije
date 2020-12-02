@@ -15,7 +15,7 @@
 
 <!-- navbar home -->
 <div class="row-lg-12 fixed-top" >
- <div class="row ">
+ <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
         <div class="container ml-2 mr-2">
         <a class="navbar-brand " href="<?=BASEURL;?>/home">
@@ -28,8 +28,9 @@
             <div class="navbar-nav">
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a>
-            <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a>
+            <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
+            <a class="nav-link text-light rounded-pill bg-success btn-login ml-2" href="<?=BASEURL;?>/login">Masuk</a><br>
+            <a class="nav-link text-light rounded-pill bg-success btn-login ml-2" href="<?=BASEURL;?>/daftar">Daftar</a>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 
         public function index()
         {
-            $data['title']="Cari Kos Mudah Dan Terpercaya";
+            $data['title'] = "Sign In";
             $this->views('login/index',$data);
         }
 
