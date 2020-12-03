@@ -29,8 +29,7 @@
             <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
             <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
-            <a class="nav-link text-light rounded-pill bg-success btn-login ml-2" href="<?=BASEURL;?>/login">Masuk</a><br>
-            <a class="nav-link text-light rounded-pill bg-success btn-login ml-2" href="<?=BASEURL;?>/daftar">Daftar</a>
+            <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>
             </div>
         </div>
     </div>

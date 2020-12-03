@@ -56,29 +56,11 @@
 
             <!-- First Name -->
             <div class="row form-login">
-                <div class="col-md-7">
-                    <label for="first_name">Nama Depan</label>
-                    <input type="text" name="firstname" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama depan anda" id="first_name">                
-                </div>
-
-                <!-- Last Name -->
                 <div class="col-md-12">
-                    <label for="last_name">Nama Belakang</label>
-                    <input type="text" name="lastname" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama belakang anda anda" id="last_name">                
+                    <label for="first_name">Nama Anda</label>
+                    <input type="text" name="firstname" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama anda" id="first_name">                
                 </div>
-
-                <!-- Gender -->
-                <label for="last_name" class="mt-2">Jenis Kelamin</label>  
-                  <div class="col-md-4 mt-2 ml-3">
-                      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadioInline1">Laki-Laki</label>
-                  </div>
-                  <div class="col-md-4 mt-2 mb-1">
-                      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
-                  </div>
-               
-
+            
               <!-- No Handphone -->
               <div class="col-md-12">
                 <label for="handphone">No Handphone</label>

@@ -17,9 +17,9 @@
         $pesan = $_GET['pesan'];
         if ($pesan == "input") {
             echo "Data berhasil di input";
-        } elseif ($pesan == "update") {
+        } else if ($pesan == "update") {
             echo "Data berhasil di update";
-        } elseif ($pesan == "hapus") {
+        } else if ($pesan == "hapus") {
             echo "Data berhasil di hapus";
         }
     }
