@@ -58,14 +58,14 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?= BASEURL; ?>/dashboard_blog">
+        <a class="nav-link" href="<?= BASEURL; ?>/dashboard/blog">
           <i class="fas fa-pencil-alt"></i>
           <span>Blogs</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="<?=BASEURL;?>/dashboard_mitra">
+        <a class="nav-link" href="<?=BASEURL;?>/dashboard/mitra">
           <i class="fas fa-fw fa-table"></i>
           <span>Mitra</span></a>
       </li>
