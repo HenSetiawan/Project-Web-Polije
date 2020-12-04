@@ -57,8 +57,8 @@
             <!-- First Name -->
             <div class="row form-login">
 
-                <div class="col-md-6">
-                    <label for="first_name">Nama Depan</label>
+                <div class="col-md-12">
+                    <label for="first_name">Nama Anda</label>
                     <input type="text" name="firstname" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama depan anda" id="first_name">                
                 </div>
 

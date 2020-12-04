@@ -31,9 +31,6 @@
             <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
 
             <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>
-
-            <a class="nav-link text-light rounded-pill bg-success btn-login ml-1 mr-1" href="<?=BASEURL;?>/login">Masuk</a><br>
-
             </div>
         </div>
     </div>
