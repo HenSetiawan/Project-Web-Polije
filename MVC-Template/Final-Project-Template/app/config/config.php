@@ -4,4 +4,4 @@
     define('DB_HOST','localhost');
     define('DB_PASSWORD','');
     define('DB_USER','root');
-    define('DB_NAME','phpdasar');
+    define('DB_NAME','koskosang');

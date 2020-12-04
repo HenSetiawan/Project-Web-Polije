@@ -7,9 +7,9 @@
         }
 
 
-        protected function model($modelName)
+        protected function model($modelFolder,$modelName)
         {
-            require "./app/models/$modelName".".php";
+            require "./app/models/$modelFolder/$modelName".".php";
             return new $modelName;
         }
     }
