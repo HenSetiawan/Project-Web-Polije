@@ -13,10 +13,17 @@
 
         public function mitra()
         {
-            $data['mitra']=$this->model("dashboard","MitraModel")->getAllMitra();
+            $mitraModelClass=$this->model("dashboard","MitraModel");
+            $data['mitra']=$mitraModelClass->getAllMitra();
+            
             $this->views('template-dashboard/header');
             $this->views('dashboard/mitra',$data);
             $this->views('template-dashboard/footer');
+
+            if(isset($_POST['submitMitra'])){
+                $mitraModelClass->insertDataMitra($_POST);
+            }
+
         }
 
 

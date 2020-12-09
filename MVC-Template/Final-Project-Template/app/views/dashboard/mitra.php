@@ -80,7 +80,9 @@
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                  Tambah
+                  </button>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -104,8 +106,9 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                              <?php foreach($data['mitra'] as $mitra) ?>
-                              <tr>
+                              <?php 
+                              foreach($data['mitra'] as $mitra){ ?>
+                                <tr>
                                     <td><?= $mitra['nama'] ; ?></td>
                                     <td><?= $mitra['alamat'] ; ?></td>
                                     <td><?= $mitra['email'] ; ?></td>
@@ -115,8 +118,7 @@
                                         <a href="http://" class="btn btn-sm btn-warning">Ubah</a>
                                     </td>
                                 </tr>
-                              <?php  ?>
-                                
+                              <?php } ?>  
                             </tbody>
                         </table>
                     </div>
@@ -127,6 +129,70 @@
 
         </div>
         <!-- /.container-fluid -->
+
+
+        <!-- Button trigger modal -->
+   
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <form action="" method="post">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Tambah Data Mitra</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                <div class="row">
+                  <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <input type="text" name="alamat" id="alamat" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    	<label for="noKtp">No KTP</label>
+                      <input type="text" name="noKtp" id="noKtp" class="form-control">
+                </div>
+                
+                  </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" name="email" id="email" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    	<label for="noHandphone">No Handphone</label>
+                      <input type="text" name="noHandphone" id="noHandphone" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+                  </div>
+                </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
+                  <button type="submit" class="btn btn-primary btn-sm" name="submitMitra">Simpan Data</button>
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>
 
       </div>
       <!-- End of Main Content -->
