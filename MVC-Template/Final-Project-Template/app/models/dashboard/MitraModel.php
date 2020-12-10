@@ -1,6 +1,7 @@
-<?php 
+<?php
 
-class MitraModel {
+class MitraModel
+{
 
     public $db;
 
@@ -24,13 +25,17 @@ class MitraModel {
         $alamat = $data['alamat'];
         $email = $data['email'];
         $noHandphone = $data['noHandphone'];
-        $password = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
+        $password = password_hash($data['password'], PASSWORD_DEFAULT);
 
         $insertQuery = "INSERT INTO pemilik_kos
                         VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone')";
 
         $this->db->query($insertQuery);
     }
-}
 
-?>
+
+    public function deleteMitra($id)
+    {
+        $this->db->query("DELETE FROM pemilik_kos WHERE id_pemilik='$id'");
+    }
+}

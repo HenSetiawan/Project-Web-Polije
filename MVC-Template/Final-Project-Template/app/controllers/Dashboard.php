@@ -10,7 +10,7 @@
             $this->views('template-dashboard/footer');
         }
 
-
+        // controller dashboard mitra
         public function mitra()
         {
             $mitraModelClass = $this->model("dashboard","MitraModel");
@@ -24,6 +24,15 @@
                 $mitraModelClass->insertDataMitra($_POST);
             }
 
+        }
+
+
+        public function hapusMitra($id)
+        {
+            $mitraModelClass = $this->model("dashboard","MitraModel");
+            $mitraModelClass->deleteMitra($id);
+            $baseUrl=BASEURL;
+            header("Location:$baseUrl/dashboard/mitra");
         }
 
 

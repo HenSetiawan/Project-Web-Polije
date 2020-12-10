@@ -35,16 +35,24 @@ class LoginModel {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
 
+<<<<<<< HEAD
+=======
+        $insertQuery = "INSERT INTO user
+                        VALUES 
+                        ('$idUser','$name','$email','$password','$noHandphone','$vkey', $token)";
+
+       
+
+>>>>>>> ad3b935045a7080aa93342f25c0edbd4c0f5dced
         // Send an email to user
 
-		require_once './app/PHPMailer/PHPMailerAutoload.php';
-
+		require_once './app/phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer;
 
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';					      // Specify main and backup SMTP servers
+		$mail->Host = 'smtp.hostinger.com';					      // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
 		$mail->Username = 'remanagedata@gmail.com';           // SMTP username
 		$mail->Password =  $this->auth;                       // SMTP password
@@ -74,6 +82,7 @@ class LoginModel {
 		</p>";
 
 		if ($mail->send()) {
+<<<<<<< HEAD
 			$insertQuery = "INSERT INTO user
 							VALUES 
 							('$idUser','$name','$email','$password',
@@ -90,6 +99,12 @@ class LoginModel {
 				alert('Konfirmasi email gagal dikirim');
 			</script>";
 			echo "<center><p>$mail->ErrorInfo</p><center>";
+=======
+			// insert data ke table user
+			$this->db->query($insertQuery);
+			return 1;
+		}else{
+>>>>>>> ad3b935045a7080aa93342f25c0edbd4c0f5dced
 			return 0;
 		}
    	}

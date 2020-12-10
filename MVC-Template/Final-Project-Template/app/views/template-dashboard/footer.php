@@ -14,6 +14,11 @@
   <script src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
   
   <script src="<?=BASEURL;?>/public/sb-admin/js/demo/datatables-demo.js"></script>
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="<?=BASEURL;?>/public/js/index.js"></script>
 </body>
 
 </html>
