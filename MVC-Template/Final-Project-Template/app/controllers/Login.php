@@ -28,15 +28,19 @@ class Login extends Controller{
 					<div class='alert alert-success alert-dismissible fade show mt-3 col-md-6' role='alert'>
 						<span>Data berhasil ditambahkan, 
 							<strong> check email kamu sekarang </strong>
-						</span>                
+						</span>  
 					</div>
 				</center>";
 
 			}else{
 				echo 
-				"<script>
-					alert('Data gagal ditambahkan');
-				</script>";
+				"<center>
+					<div class='alert alert-danger alert-dismissible fade show mt-3 col-md-6' role='alert'>
+						<span>Data gagal ditambahkan, 
+							<strong> Gagal Mengirim Email </strong>
+						</span>    
+					</div>
+				</center>";
 			}
 		}
 

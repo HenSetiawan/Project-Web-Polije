@@ -35,12 +35,6 @@ class LoginModel {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
 
-        $insertQuery = "INSERT INTO user
-                        VALUES 
-                        ('$idUser','$name','$email','$password','$noHandphone','$vkey', $token)";
-
-        $this->db->query($insertQuery);
-
         // Send an email to user
 
 		require_once './app/PHPMailer/PHPMailerAutoload.php';
@@ -52,8 +46,8 @@ class LoginModel {
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';					      // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'remanagedata@gmail.com';                 // SMTP username
-		$mail->Password =  $this->auth;                           // SMTP password
+		$mail->Username = 'remanagedata@gmail.com';           // SMTP username
+		$mail->Password =  $this->auth;                       // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 
@@ -65,24 +59,29 @@ class LoginModel {
 		$mail->Subject = 'Selamat Datang di KosKosang';
 		$mail->Body    = 
 		"<h1>
-		<b>
-			Selamat Datang $name, <br>
-			Yuk Verifikasi Email Kamu !
-		</b>
+			<b>
+				Selamat Datang $name, <br>
+				Yuk Verifikasi Email Kamu !
+			</b>
+		</h1>
 		<p>
 			Yuk Konfirmasi kalau $email adalah benar 
 			alamat email kamu dengan 
 			klik halaman berikut untuk konfirmasi email
-		</p>
-			<a href='<?= BASEURL ?>/login/verifikasi?vkey=$vkey'>
-			Konfirmasi Email Anda 
-		</a>
-		</h1>";
+			<a href='http://localhost/Project-Web-Polije/MVC-Template/Final-Project-Template/login/verifikasi?vkey=$vkey'>
+				Konfirmasi Akun Anda
+			</a>
+		</p>";
 
 		if ($mail->send()) {
+			$insertQuery = "INSERT INTO user
+							VALUES 
+							('$idUser','$name','$email','$password',
+							'$noHandphone','$vkey', $token)";
+			$this->db->query($insertQuery);
 			echo 
 			"<script>
-				alert('Konfirmasi email telah dikirim');
+				alert('Konfirmasi email berhasil dikirim');
 			</script>";
 			return 1;
 		}else{
@@ -90,6 +89,7 @@ class LoginModel {
 			"<script>
 				alert('Konfirmasi email gagal dikirim');
 			</script>";
+			echo "<center><p>$mail->ErrorInfo</p><center>";
 			return 0;
 		}
    	}
