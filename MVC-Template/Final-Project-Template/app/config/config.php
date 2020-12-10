@@ -5,3 +5,4 @@
     define('DB_PASSWORD','');
     define('DB_USER','root');
     define('DB_NAME','koskosang');
+    define('AUTH', 'dwirifki31');

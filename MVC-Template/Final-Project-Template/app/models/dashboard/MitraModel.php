@@ -1,12 +1,12 @@
 <?php 
 
-class MitraModel{
+class MitraModel {
 
     public $db;
 
     function __construct()
     {
-        $this->db=new Database;
+        $this->db = new Database;
     }
 
 
@@ -19,18 +19,15 @@ class MitraModel{
 
     public function insertDataMitra($data)
     {
-        $noKtp=$data['noKtp'];
-        $name=$data['name'];
-        $alamat=$data['alamat'];
-        $email=$data['email'];
-        $noHandphone=$data['noHandphone'];
-        $password=password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
+        $noKtp = $data['noKtp'];
+        $name = $data['name'];
+        $alamat = $data['alamat'];
+        $email = $data['email'];
+        $noHandphone = $data['noHandphone'];
+        $password = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 
-
-       
-
-        $insertQuery="INSERT INTO pemilik_kos
-                    VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone')";
+        $insertQuery = "INSERT INTO pemilik_kos
+                        VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone')";
 
         $this->db->query($insertQuery);
     }

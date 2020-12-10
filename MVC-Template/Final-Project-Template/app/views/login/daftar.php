@@ -30,7 +30,7 @@
 <!--end navbar login -->
 
 <!-- start container -->
-<div class="container main-login">
+<div class="container main-login"> 
 
 
     <!-- login page -->
@@ -58,8 +58,8 @@
             <div class="row form-login">
 
                 <div class="col-md-12">
-                    <label for="first_name">Nama Anda</label>
-                    <input type="text" name="firstname" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama depan anda" id="first_name">                
+                    <label for="name">Nama Anda</label>
+                    <input type="text" name="name" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="nama lengkap anda" id="name">                
                 </div>
 
                 <!-- Last Name -->
@@ -85,7 +85,7 @@
 
         <div class="row mt-1 mb-4 button-login">
             <div class="col">
-                <button class="btn btn-success btn-sm rounded-pill">Daftar</button>
+                <button class="btn btn-success btn-sm rounded-pill" type="submit" name="submit">Daftar</button>
             </div>
         </div>
     </form>

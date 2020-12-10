@@ -26,6 +26,7 @@
         <a href="" class="text-secondary">Syarat dan ketentuan</a>
     </section>
 </footer>
+
 <script src="<?=BASEURL;?>/public/js/index.js"></script>
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
 

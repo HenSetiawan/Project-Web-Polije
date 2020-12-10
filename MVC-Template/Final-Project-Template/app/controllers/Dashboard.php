@@ -13,8 +13,8 @@
 
         public function mitra()
         {
-            $mitraModelClass=$this->model("dashboard","MitraModel");
-            $data['mitra']=$mitraModelClass->getAllMitra();
+            $mitraModelClass = $this->model("dashboard","MitraModel");
+            $data['mitra'] = $mitraModelClass->getAllMitra();
             
             $this->views('template-dashboard/header');
             $this->views('dashboard/mitra',$data);

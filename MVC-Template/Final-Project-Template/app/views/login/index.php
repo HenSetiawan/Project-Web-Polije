@@ -70,7 +70,7 @@
                     <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
                 </div>
                 <div class="col ml-5">
-                    <a href="<?=BASEURL?>/lupa_password" class="text-decoration-none">Lupa password</a>
+                    <a href="<?=BASEURL?>/login/lupa_Password" class="text-decoration-none">Lupa password</a>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@
                     <button class="btn btn-success btn-sm rounded-pill">Login</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-outline-success btn-sm rounded-pill" onclick="location.href='<?=BASEURL?>/daftar'" type="button">Daftar</button>
+                    <button class="btn btn-outline-success btn-sm rounded-pill" onclick="location.href='<?=BASEURL?>/login/daftar'" type="button">Daftar</button>
                 </div>
             </div>
         </form>
