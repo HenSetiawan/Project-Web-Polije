@@ -39,18 +39,17 @@ class LoginModel {
                         VALUES 
                         ('$idUser','$name','$email','$password','$noHandphone','$vkey', $token)";
 
-        $this->db->query($insertQuery);
+       
 
         // Send an email to user
 
-		require_once './app/PHPMailer/PHPMailerAutoload.php';
-
+		require_once './app/phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer;
 
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';					      // Specify main and backup SMTP servers
+		$mail->Host = 'smtp.hostinger.com';					      // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
 		$mail->Username = 'remanagedata@gmail.com';                 // SMTP username
 		$mail->Password =  $this->auth;                           // SMTP password
@@ -80,16 +79,10 @@ class LoginModel {
 		</h1>";
 
 		if ($mail->send()) {
-			echo 
-			"<script>
-				alert('Konfirmasi email telah dikirim');
-			</script>";
+			// insert data ke table user
+			$this->db->query($insertQuery);
 			return 1;
 		}else{
-			echo 
-			"<script>
-				alert('Konfirmasi email gagal dikirim');
-			</script>";
 			return 0;
 		}
    	}

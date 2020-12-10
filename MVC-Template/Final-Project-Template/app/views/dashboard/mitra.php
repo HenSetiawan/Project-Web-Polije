@@ -114,7 +114,7 @@
                                     <td><?= $mitra['email'] ; ?></td>
                                     <td><?= $mitra['no_hp'] ; ?></td>
                                     <td>
-                                        <a href="http://" class="btn btn-sm btn-danger">Hapus</a>
+                                        <button class="btn btn-sm btn-danger btn-delete-mitra" data-url="<?=BASEURL?>/dashboard/hapusMitra/<?=$mitra['id_pemilik'] ?>">Hapus</button>
                                         <a href="http://" class="btn btn-sm btn-warning">Ubah</a>
                                     </td>
                                 </tr>

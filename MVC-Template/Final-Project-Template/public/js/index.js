@@ -1,11 +1,13 @@
-(function () {
-        var options = {
-            whatsapp: "+62123456789", // WhatsApp number
-            call_to_action: "Hi, Ada yang bisa kami bantu ?", // Call to action
-            position: "right", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
+
+// sweet alert 
+const btnDelMitra=document.querySelector('.btn-delete-mitra');
+btnDelMitra.addEventListener('click',async()=>{
+   const url=btnDelMitra.dataset.url;
+   const isAlert=await swal("Apakah anda ingin menghapus data ini?", {
+        buttons: ["Tidak", "Iya"],
+      });
+
+      if(isAlert){
+          location.replace(url);
+      }
+})
