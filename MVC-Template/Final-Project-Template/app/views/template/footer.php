@@ -29,6 +29,7 @@
 
 <script src="<?=BASEURL;?>/public/js/index.js"></script>
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
+<script src="<?=BASEURL;?>/public/js/wa.js"></script>
 
 </body>
 </html>

@@ -4,8 +4,16 @@ class Login extends Controller{
 
 	public function index()
 	{
+		$modelDaftar = $this->model("login", "LoginModel");
+
 		$data['title'] = "Sign In";
 		$this->views('login/index',$data);
+
+		if (isset($_POST["submit"])) {
+			if ($modelDaftar->checkLogin($_POST) > 0) {
+				echo "Berhasil Login";
+			}
+		}
 	}
 
 	public function lupa_password()
@@ -35,9 +43,9 @@ class Login extends Controller{
 			}else{
 				echo 
 				"<center>
-					<div class='alert alert-danger alert-dismissible fade show mt-3 col-md-6' role='alert'>
+					<div class='alert alert-warning alert-dismissible fade show mt-3 col-md-6' role='alert'>
 						<span>Data gagal ditambahkan, 
-							<strong> Gagal Mengirim Email </strong>
+							<strong> Gagal Mengirim Email</strong>
 						</span>    
 					</div>
 				</center>";

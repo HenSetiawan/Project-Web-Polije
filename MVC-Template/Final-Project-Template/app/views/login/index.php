@@ -76,7 +76,7 @@
 
             <div class="row mt-5 mb-5 button-login">
                 <div class="col">
-                    <button class="btn btn-success btn-sm rounded-pill">Login</button>
+                    <button class="btn btn-success btn-sm rounded-pill" type="submit" name="submit">Login</button>
                 </div>
                 <div class="col">
                     <button class="btn btn-outline-success btn-sm rounded-pill" onclick="location.href='<?=BASEURL?>/login/daftar'" type="button">Daftar</button>
@@ -100,6 +100,6 @@
 <script src="<?=BASEURL;?>/public/js/index.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
-
+<script src="<?=BASEURL;?>/public/js/wa.js"></script>
 </body>
 </html>

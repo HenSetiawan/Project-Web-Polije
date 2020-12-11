@@ -51,12 +51,12 @@ class LoginModel {
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';					      // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'remanagedata@gmail.com';           // SMTP username
+		$mail->Username = 'mybisnis0101@gmail.com';           // SMTP username
 		$mail->Password =  $this->auth;                       // SMTP password
-		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-		$mail->Port = 587;                                    // TCP port to connect to
+		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 465;                                    // TCP port to connect to
 
-		$mail->setFrom('remanagedata@gmail.com', 'KosKosang');
+		$mail->setFrom('mybisnis0101@gmail.com', 'KosKosang');
 		$mail->addAddress($email, $name);   
 
 		$mail->isHTML(true);                                  // Set email format to HTML
@@ -90,7 +90,6 @@ class LoginModel {
 			</script>";
 			return 1;
 		}else{
-			echo 
 			"<script>
 				alert('Konfirmasi email gagal dikirim');
 			</script>";
@@ -98,6 +97,14 @@ class LoginModel {
 			return 0;
 		}
    	}
+
+   	public function checkLogin($data)
+   	{
+
+   	}
+
+
+
 }
 
 ?>
