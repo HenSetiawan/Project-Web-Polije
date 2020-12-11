@@ -75,7 +75,7 @@ class LoginModel {
 			Yuk Konfirmasi kalau $email adalah benar 
 			alamat email kamu dengan 
 			klik halaman berikut untuk konfirmasi email
-			<a href='http://localhost/Project-Web-Polije/MVC-Template/Final-Project-Template/login/verifikasi?vkey=$vkey'>
+			<a href='<?=BASEURL?>/login/verivikasi/<?=$vkey ?>'>
 				Konfirmasi Akun Anda
 			</a>
 		</p>";
