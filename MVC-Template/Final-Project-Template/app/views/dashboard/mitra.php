@@ -80,7 +80,7 @@
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" class="btn btn-primary btn-sm" id="btn-tambah-mitra" data-toggle="modal" data-target="#exampleModal">
                   Tambah
                   </button>
                 </div>
@@ -114,8 +114,9 @@
                                     <td><?= $mitra['email'] ; ?></td>
                                     <td><?= $mitra['no_hp'] ; ?></td>
                                     <td>
-                                        <button class="btn btn-sm btn-danger btn-delete-mitra" data-url="<?=BASEURL?>/dashboard/hapusMitra/<?=$mitra['id_pemilik'] ?>">Hapus</button>
-                                        <a href="http://" class="btn btn-sm btn-warning">Ubah</a>
+                                        <button class="btn btn-sm btn-danger btn-delete-mitra" data-url="<?=BASEURL?>/dashboard/DeleteMitra/<?=$mitra['id_pemilik'] ?>">Hapus</button>
+
+                                        <button  class="btn btn-sm btn-warning btn-update-mitra" data-toggle="modal" data-target="#exampleModal" data-url="<?=BASEURL?>/dashboard/getMitraById/<?=$mitra['id_pemilik'] ?>">Ubah</a>
                                     </td>
                                 </tr>
                               <?php } ?>  
@@ -137,16 +138,15 @@
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <form action="" method="post">
+            <form action="<?=BASEURL?>/dashboard/createOrUpdateMitra" method="post">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Tambah Data Mitra</h5>
+                  <h5 class="modal-title title-modal-mitra" id="title-modal-mitra">Tambah Data Mitra</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-
                 <div class="row">
                   <div class="col-md-6">
                   <div class="form-group">
@@ -187,7 +187,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
-                  <button type="submit" class="btn btn-primary btn-sm" name="submitMitra">Simpan Data</button>
+                  <button type="submit" id="btn-submit-mitra" class="btn btn-primary btn-sm" name="submitMitra">Simpan Data</button>
                 </div>
               </div>
             </form>

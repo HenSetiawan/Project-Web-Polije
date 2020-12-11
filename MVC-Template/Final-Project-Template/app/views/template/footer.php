@@ -27,7 +27,7 @@
     </section>
 </footer>
 
-<script src="<?=BASEURL;?>/public/js/index.js"></script>
+<script src="<?=BASEURL;?>/public/js/wa.js"></script>
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
 
 </body>
