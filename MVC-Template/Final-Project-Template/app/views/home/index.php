@@ -21,100 +21,118 @@
 
 
 <div class="row mt-5">
-    <div class="col-md-3 mb-3">
-        <div class="card" >
-        <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-          <p class="card-text mt-2">Kos Kampus Polije</p>
-          <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-          <p class="price-kos">Rp 350.000/Bulan</p>
-        </div>
-        </div>
-    </div>
+<div class="col-md-3 mb-3">
+      <a href="<?=BASEURL?>/home/detail/1">
+          <div class="card" >
+          <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+            <p class="card-text mt-2">Kos Kampus Polije</p>
+            <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+            <p class="price-kos">Rp 350.000/Bulan</p>
+          </div>
+          </div>
+        </a>
+</div>
 
-  <div class="col-md-3 mb-3">
-    <div class="card">
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
+<div class="col-md-3 mb-3">
+  <a href="<?=BASEURL?>/home/detail/1">
+      <div class="card" >
+      <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+        <p class="card-text mt-2">Kos Kampus Polije</p>
+        <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+        <p class="price-kos">Rp 350.000/Bulan</p>
+      </div>
+      </div>
+    </a>
+</div>
 
- <div class="col-md-3 mb-3">
-    <div class="card">
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
 
- <div class="col-md-3 mb-3">
-    <div class="card" >
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
 
- <div class="col-md-3 mb-3">
-    <div class="card" >
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
+<div class="col-md-3 mb-3">
+      <a href="<?=BASEURL?>/home/detail/1">
+          <div class="card" >
+          <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+            <p class="card-text mt-2">Kos Kampus Polije</p>
+            <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+            <p class="price-kos">Rp 350.000/Bulan</p>
+          </div>
+          </div>
+        </a>
+</div>
 
- <div class="col-md-3 mb-3">
-    <div class="card" >
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
+<div class="col-md-3 mb-3">
+  <a href="<?=BASEURL?>/home/detail/1">
+      <div class="card" >
+      <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+        <p class="card-text mt-2">Kos Kampus Polije</p>
+        <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+        <p class="price-kos">Rp 350.000/Bulan</p>
+      </div>
+      </div>
+    </a>
+</div>
 
- <div class="col-md-3 mb-3">
-    <div class="card" >
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
+<div class="col-md-3 mb-3">
+      <a href="<?=BASEURL?>/home/detail/1">
+          <div class="card" >
+          <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+            <p class="card-text mt-2">Kos Kampus Polije</p>
+            <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+            <p class="price-kos">Rp 350.000/Bulan</p>
+          </div>
+          </div>
+        </a>
+</div>
 
- <div class="col-md-3 mb-3">
-    <div class="card" >
-    <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
-      <p class="card-text mt-2">Kos Kampus Polije</p>
-      <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
-      <p class="price-kos">Rp 350.000/Bulan</p>
-    </div>
-    </div>
- </div>
+<div class="col-md-3 mb-3">
+  <a href="<?=BASEURL?>/home/detail/1">
+      <div class="card" >
+      <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+        <p class="card-text mt-2">Kos Kampus Polije</p>
+        <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+        <p class="price-kos">Rp 350.000/Bulan</p>
+      </div>
+      </div>
+    </a>
+</div>
+
+<div class="col-md-3 mb-3">
+      <a href="<?=BASEURL?>/home/detail/1">
+          <div class="card" >
+          <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+            <p class="card-text mt-2">Kos Kampus Polije</p>
+            <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+            <p class="price-kos">Rp 350.000/Bulan</p>
+          </div>
+          </div>
+        </a>
+</div>
+
+<div class="col-md-3 mb-3">
+  <a href="<?=BASEURL?>/home/detail/1">
+      <div class="card" >
+      <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos">Campur</span>
+        <p class="card-text mt-2">Kos Kampus Polije</p>
+        <i class="fas fa-map-marker-alt location-kos"><span class="pl-1">Bondowoso</span></i>
+        <p class="price-kos">Rp 350.000/Bulan</p>
+      </div>
+      </div>
+    </a>
+</div>
 </div>
 
