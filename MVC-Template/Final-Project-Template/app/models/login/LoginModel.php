@@ -48,8 +48,10 @@ class LoginModel {
 
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';					      // Specify main and backup SMTP servers
+		$mail->isSMTP();
+		$mail->SMTPKeepAlive = true;
+		$mail->Mailer = "smtp";                                    // Set mailer to use SMTP
+		$mail->Host = "ssl://smtp.gmail.com";					      // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
 		$mail->Username = 'mybisnis0101@gmail.com';           // SMTP username
 		$mail->Password =  $this->auth;                       // SMTP password
@@ -86,12 +88,12 @@ class LoginModel {
 			$this->db->query($insertQuery);
 			echo 
 			"<script>
-				alert('Konfirmasi email berhasil dikirim');
+				swal('Email berhasil dikirim');
 			</script>";
 			return 1;
 		}else{
 			"<script>
-				alert('Konfirmasi email gagal dikirim');
+				swal('Email gagal dikirim');
 			</script>";
 			echo "<center><p>$mail->ErrorInfo</p><center>";
 			return 0;

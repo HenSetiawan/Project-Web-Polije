@@ -38,4 +38,23 @@ class MitraModel
     {
         $this->db->query("DELETE FROM pemilik_kos WHERE id_pemilik='$id'");
     }
+
+    public function getMitraById($id)
+    {
+       $this->db->query("SELECT * FROM pemilik_kos WHERE id_pemilik='$id'");
+       return $this->db->getData();
+    }
+
+    public function updateMitra($data)
+    {
+        $noKtp = $data['noKtp'];
+        $name = $data['name'];
+        $alamat = $data['alamat'];
+        $email = $data['email'];
+        $noHandphone = $data['noHandphone'];
+        $password = password_hash($data['password'], PASSWORD_DEFAULT);
+
+        $updateQuery="UPDATE pemilik_kos SET id_pemilik='$noKtp',nama='$name',alamat='$alamat',email='$email',password='$password',no_hp='$noHandphone' WHERE id_pemilik='$noKtp'";
+        $this->db->query($updateQuery);
+    }
 }
