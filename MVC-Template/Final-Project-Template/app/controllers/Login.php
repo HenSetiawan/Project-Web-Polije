@@ -11,9 +11,7 @@ class Login extends Controller{
 		$this->views('login/index', $data);
 
 		if (isset($_POST["submit"])) {
-			if ($modelDaftar->checkLogin($_POST) > 0) {
-				echo "Berhasil Login";
-			}
+			$modelDaftar->checkLogin($_POST);
 		}
 	}
 
@@ -23,7 +21,6 @@ class Login extends Controller{
 	{
 
 		if ($vkey == null) {
-
 			header("Location:" . BASEURL . "/home");
 		}
 	
