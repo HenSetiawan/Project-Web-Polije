@@ -4,16 +4,18 @@ class LoginModel {
 
     public $db;
     public $auth = AUTH;
+    public $BASEURL = BASEURL;
 
     function __construct()
     {
         $this->db = new Database;
     }
 
+    // registration user
     public function insertDataUser($data)
     {
  
-
+    	// variables
         $idUser = uniqid();
         $name = $data["name"];
         $email = $data['email'];
@@ -22,8 +24,10 @@ class LoginModel {
         $vkey = md5(time() . $email);
         $token = 0;
 
+        // check email user
         $this->db->query("SELECT * FROM user WHERE email = '$email'");
 
+        // there's no same email in database
         if (mysqli_num_rows($this->db->result) > 0) {
         	echo 
         	"<script>
@@ -32,18 +36,12 @@ class LoginModel {
         return false;
         }
 
+        // hash password
         $password = password_hash($password, PASSWORD_DEFAULT);
-
-
-
-        $insertQuery = "INSERT INTO user
-                        VALUES 
-                        ('$idUser','$name','$email','$password','$noHandphone','$vkey', $token)";
-
        
-        // Send an email to user
-
+    // Send an email to user
 		require_once './app/phpmailer/PHPMailerAutoload.php';
+		
 		$mail = new PHPMailer;
 
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -65,7 +63,7 @@ class LoginModel {
 
 		$mail->Subject = 'Selamat Datang di KosKosang';
 		$mail->Body    = 
-		"<h1>
+		'<h1>
 			<b>
 				Selamat Datang $name, <br>
 				Yuk Verifikasi Email Kamu !
@@ -75,11 +73,12 @@ class LoginModel {
 			Yuk Konfirmasi kalau $email adalah benar 
 			alamat email kamu dengan 
 			klik halaman berikut untuk konfirmasi email
-			<a href='http://localhost/Project-Web-Polije/MVC-Template/Final-Project-Template/login/verifikasi?vkey=$vkey'>
+			<a href= "$BASEURL/login/v/$vkey">
 				Konfirmasi Akun Anda
 			</a>
-		</p>";
+		</p>';
 
+		// check an email has sent
 		if ($mail->send()) {
 			$insertQuery = "INSERT INTO user
 							VALUES 
@@ -88,22 +87,53 @@ class LoginModel {
 			$this->db->query($insertQuery);
 			echo 
 			"<script>
-				swal('Email berhasil dikirim');
+				swal('Konfirmasi email berhasil dikirim');
 			</script>";
 			return 1;
 		}else{
+      echo 
 			"<script>
-				swal('Email gagal dikirim');
+				swal('Konfirmasi email gagal dikirim');
 			</script>";
-			echo "<center><p>$mail->ErrorInfo</p><center>";
 			return 0;
 		}
-   	}
 
-   	public function checkLogin($data)
+   	} //end of registration user 
+
+
+   	// verification email
+   	public function checkVerification($data)
    	{
+   		if (isset($data)) {
+   			// insert to variable vkey
+   			$vkey = $data;
 
-   	}
+   			// Query to database
+   			$this->db->query("SELECT vkey, token FROM user WHERE token = 0 AND vkey = '$vkey'");
+
+   			if (mysqli_num_rows($this->db->result) == 1) {
+   				
+   				// validate email
+   				$this->db->query("UPDATE user SET token = 1 WHERE vkey = '$vkey'");
+
+   				if (mysqli_affected_rows($this->db->link) > 0) {
+   					echo 
+   					"<script>
+   						swal('Akun anda telah diverifikasi');
+   					</script>";
+   				return 1;
+   				} 
+
+   			}else{
+   				echo 
+   				"<script>
+   					swal('Kode verifikasi anda tidak valid');
+   				</script>";
+   			return 0;	
+   			}
+   		}
+   	
+   	} //end of verification email
 
 
 
