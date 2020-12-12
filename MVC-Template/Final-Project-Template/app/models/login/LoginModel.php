@@ -73,7 +73,7 @@ class LoginModel {
 			Yuk Konfirmasi kalau $email adalah benar 
 			alamat email kamu dengan 
 			klik halaman berikut untuk konfirmasi email
-			<a href= "$BASEURL/login/v/$vkey">
+			<a href="<?=BASEURL?>/login/v/<?=$vkey ?>">
 				Konfirmasi Akun Anda
 			</a>
 		</p>';
@@ -98,11 +98,12 @@ class LoginModel {
 			return 0;
 		}
 
-   	} //end of registration user 
+   	} // end of registration user 
 
 
    	// verification email
    	public function checkVerification($data)
+
    	{
    		if (isset($data)) {
    			// insert to variable vkey
@@ -134,9 +135,8 @@ class LoginModel {
    		}
    	
    	} //end of verification email
-
-
-
 }
+
+
 
 ?>
