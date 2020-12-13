@@ -5,6 +5,7 @@ class LoginModel {
   // attr
   public $db;
   public $auth = AUTH;
+ 
 
   // call database automatically
   function __construct()
@@ -65,6 +66,8 @@ public function checkVerification($data)
         // variables
         $email=$data['email'];
         $password=$data['password'];
+        $rememberMe=$data['remember-me'];
+
 
         // query to database
         $this->db->query("SELECT * FROM user WHERE email='$email'");
@@ -92,9 +95,42 @@ public function checkVerification($data)
         "<script>
             swal('Email atau password anda salah');
         </script>";
+        $this->db->query("SELECT * FROM user WHERE email='$email' AND token =1");
+        if(mysqli_num_rows($this->db->result)==1){
+          $dataUser=$this->db->getData();
+          $isPasswordValid=password_verify($password,$dataUser['password']);
+
+          if($isPasswordValid){
+            $_SESSION['loginUser']=true;
+            if(!$rememberMe==null){
+              setcookie('id',$dataUser['id_user'],time() + (86400 * 30),'/');
+            }
+            return $this->db->getData();
+          }
+
         }
     }
 
+
+    // method check cookie
+    public function checkRememberMe()
+    {
+      if(isset($_COOKIE['id'])){        
+        $cookieId=$_COOKIE['id'];
+        $this->db->query("SELECT * FROM user WHERE id_user ='$cookieId' ");
+
+        if(mysqli_num_rows($this->db->result)){
+          if(!isset($_SESSION)){
+            session_start();
+          }
+            $_SESSION['loginUser']=true;
+        }
+        return $this->db->getData();
+
+      }
+
+
+    }
 
     // method logout
     public function logOutUser()
@@ -104,8 +140,9 @@ public function checkVerification($data)
         session_start();
       }
         session_destroy();
+        setcookie('id',FALSE,time()-3600,'/');
     }
-
-  
   } 
+}
+
 ?>

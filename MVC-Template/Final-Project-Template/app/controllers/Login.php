@@ -5,18 +5,20 @@ class Login extends Controller{
 	// Login -> index.php
 	public function index()
 	{
-		if(isset($_SESSION['loginUser'])){
-			header("Location:" . BASEURL . "/home");
-		}
+		$modelDaftar = $this->model("login", "LoginModel");
+		$modelDaftar->checkRememberMe();
+		// if(isset($_SESSION['loginUser'])){
+		// 	header("Location:" . BASEURL . "/home");
+		// }
 		$data['title'] = "Sign In";
 		$this->views('login/index', $data);
+
 	}
 
 
 	public function loginUser()
 	{
 		$modelDaftar = $this->model("login", "LoginModel");
-
 		if(isset($_SESSION['loginUser'])){
 			header("Location:" . BASEURL . "/home");
 		}
@@ -25,8 +27,9 @@ class Login extends Controller{
 			$modelDaftar->checkLogin($_POST);
 			if(isset($_SESSION['loginUser'])){
 				header("Location:" . BASEURL . "/home");
+			}else{
+				header("Location:" . BASEURL . "/login");
 			}
-
 		}
 	}
 
