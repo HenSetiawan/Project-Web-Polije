@@ -17,7 +17,10 @@ class Home extends Controller {
     {
         if(!isset($_SESSION['loginUser'])){
 			header("Location:" . BASEURL . "/login");
-		}
+        }
+        $modelDaftar = $this->model("login", "LoginModel");
+        $data['user']=$modelDaftar->checkRememberMe();
+        
         $data['title']="Cari Kos Mudah Dan Terpercaya";
         $this->views('template/header',$data);
         $this->views('home/detailKos');
