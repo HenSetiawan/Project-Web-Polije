@@ -77,7 +77,7 @@ class Login extends Controller{
 	// Login -> daftar.php
 	public function daftar()
 	{
-		$modelDaftar = $this->model("login", "LoginModel");
+		$modelDaftar = $this->model("login", "LoginDaftarModel");
 
 		$data['title'] = "Sign Up";
 		$this->views('login/daftar', $data);

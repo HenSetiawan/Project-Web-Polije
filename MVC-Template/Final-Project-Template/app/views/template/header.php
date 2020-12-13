@@ -43,7 +43,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
-                <div class="dropdown-divider"></div>
+                <!-- <div class="dropdown-divider"></div> -->
                 <a class="dropdown-item" href="<?=BASEURL?>/login/logout">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-secondary fs-6"></i>
                   Logout
