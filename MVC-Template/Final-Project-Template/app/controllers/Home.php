@@ -11,6 +11,9 @@ class Home extends Controller {
 
     public function detail()
     {
+        if(!isset($_SESSION['loginUser'])){
+			header("Location:" . BASEURL . "/login");
+		}
         $data['title']="Cari Kos Mudah Dan Terpercaya";
         $this->views('template/header',$data);
         $this->views('home/detailKos');

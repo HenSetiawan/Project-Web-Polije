@@ -76,7 +76,7 @@
 
             <div class="row mt-5 mb-5 button-login">
                 <div class="col">
-                    <button class="btn btn-success btn-sm rounded-pill" type="submit" name="submit">Login</button>
+                    <button class="btn btn-success btn-sm rounded-pill" type="submit" name="submitLogin">Login</button>
                 </div>
                 <div class="col">
                     <button class="btn btn-outline-success btn-sm rounded-pill" onclick="location.href='<?=BASEURL?>/login/daftar'" type="button">Daftar</button>

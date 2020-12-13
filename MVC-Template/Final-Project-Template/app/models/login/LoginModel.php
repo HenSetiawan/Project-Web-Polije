@@ -151,7 +151,38 @@ class LoginModel {
            return 0;	
          }
         }
-   	   } 
-      } // end of verification email
+        }
+        // end of verification email
+
+        public function checkLogin($data)
+        {
+         if(!isset($_SESSION)){
+          session_start();
+         }
+          $email=$data['email'];
+          $password=$data['password'];
+
+          $this->db->query("SELECT * FROM user WHERE email='$email'");
+          if(mysqli_num_rows($this->db->result)){
+            $dataUser=$this->db->getData();
+            $isPasswordValid=password_verify($password,$dataUser['password']);
+            if($isPasswordValid){
+              $_SESSION['loginUser']=true;
+            }else{
+              echo 
+             "<script>
+                swal('Email atau password anda salah');
+             </script>";
+            }
+          }else{
+            echo 
+           "<script>
+              swal('Email atau password anda salah');
+           </script>";
+          }
+        }
+      } 
+
+      
 
    ?>

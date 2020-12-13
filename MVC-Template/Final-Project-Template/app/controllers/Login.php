@@ -5,12 +5,16 @@ class Login extends Controller{
 	// Login -> index.php
 	public function index()
 	{
+		if(isset($_SESSION['loginUser'])){
+			header("Location:" . BASEURL . "/home");
+		}
+		
 		$modelDaftar = $this->model("login", "LoginModel");
 
 		$data['title'] = "Sign In";
 		$this->views('login/index', $data);
 
-		if (isset($_POST["submit"])) {
+		if (isset($_POST["submitLogin"])) {
 			$modelDaftar->checkLogin($_POST);
 		}
 	}
