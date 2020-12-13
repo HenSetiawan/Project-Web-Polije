@@ -66,7 +66,7 @@
 
             <div class="row option-login">
                 <div class="col ml-2">
-                    <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
+                    <input type="checkbox" name="remember-me" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
                 </div>
                 <div class="col ml-5">

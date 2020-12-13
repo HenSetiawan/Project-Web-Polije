@@ -21,11 +21,12 @@ class Login extends Controller{
 			header("Location:" . BASEURL . "/home");
 		}
 
-		if (isset($_POST["submitLogin"])) {
+		if(isset($_POST["submitLogin"])) {
 			$modelDaftar->checkLogin($_POST);
 			if(isset($_SESSION['loginUser'])){
 				header("Location:" . BASEURL . "/home");
 			}
+
 		}
 	}
 
