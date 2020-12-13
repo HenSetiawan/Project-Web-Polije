@@ -38,7 +38,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline small"><?= $data['user']['nama'] ; ?></span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" width="32px" height="32px">
               </a>
               <!-- Dropdown - User Information -->

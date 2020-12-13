@@ -201,11 +201,6 @@ public function checkVerification($data)
 
     }
 
-
-
-
-
-
     // method logout
     public function logOutUser()
     {
@@ -213,6 +208,7 @@ public function checkVerification($data)
         session_start();
         }
         session_destroy();
+        setcookie('id',FALSE,time()-3600,'/');
     }
 
       } 
