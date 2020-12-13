@@ -109,8 +109,7 @@ public function checkVerification($data)
           }
 
         }
-    }
-
+      }
 
     // method check cookie
     public function checkRememberMe()
@@ -129,9 +128,6 @@ public function checkVerification($data)
 
       }
 
-
-    }
-
     // method logout
     public function logOutUser()
     {
@@ -143,6 +139,6 @@ public function checkVerification($data)
         setcookie('id',FALSE,time()-3600,'/');
     }
   } 
-}
+
 
 ?>
