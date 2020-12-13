@@ -52,7 +52,7 @@
         </div>
 
         <!-- form login -->
-        <form action="" method="POST" >
+        <form action="<?=BASEURL?>/login/loginUser" method="POST" >
             <div class="row form-login" >
                 <div class="col-md-12">
                     <label for="email">Email</label>

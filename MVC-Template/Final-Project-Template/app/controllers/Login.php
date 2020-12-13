@@ -8,14 +8,24 @@ class Login extends Controller{
 		if(isset($_SESSION['loginUser'])){
 			header("Location:" . BASEURL . "/home");
 		}
-		
-		$modelDaftar = $this->model("login", "LoginModel");
-
 		$data['title'] = "Sign In";
 		$this->views('login/index', $data);
+	}
+
+
+	public function loginUser()
+	{
+		$modelDaftar = $this->model("login", "LoginModel");
+
+		if(isset($_SESSION['loginUser'])){
+			header("Location:" . BASEURL . "/home");
+		}
 
 		if (isset($_POST["submitLogin"])) {
 			$modelDaftar->checkLogin($_POST);
+			if(isset($_SESSION['loginUser'])){
+				header("Location:" . BASEURL . "/home");
+			}
 		}
 	}
 
@@ -94,6 +104,13 @@ class Login extends Controller{
 			}
 		}
 
+	}
+
+	public function logout()
+	{
+		$modelDaftar = $this->model("login", "LoginModel");
+		$modelDaftar->logOutUser();
+		header("Location:" . BASEURL . "/home");
 	}
 
 }

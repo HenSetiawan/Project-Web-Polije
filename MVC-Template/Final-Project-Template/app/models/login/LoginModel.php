@@ -187,6 +187,21 @@ class LoginModel {
         }
       } // end of check login
 
+
+
+        public function logOutUser()
+        {
+          if(!isset($_SESSION)){
+            session_start();
+           }
+           session_destroy();
+        }
+
+
+
+
+      } 
+
       
 
    ?>
