@@ -106,10 +106,11 @@ public function checkVerification($data)
               setcookie('id',$dataUser['id_user'],time() + (86400 * 30),'/');
             }
             return $this->db->getData();
+            }
           }
-
         }
-      }
+    }
+    
 
     // method check cookie
     public function checkRememberMe()
@@ -125,8 +126,9 @@ public function checkVerification($data)
             $_SESSION['loginUser']=true;
         }
         return $this->db->getData();
-
       }
+    }
+
 
     // method logout
     public function logOutUser()
@@ -139,6 +141,5 @@ public function checkVerification($data)
         setcookie('id',FALSE,time()-3600,'/');
     }
   } 
-
 
 ?>
