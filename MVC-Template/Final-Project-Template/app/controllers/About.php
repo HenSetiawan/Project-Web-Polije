@@ -6,6 +6,7 @@ class About extends Controller{
     {
         $data['title']="Cari Kos Mudah Dan Terpercaya";
         $this->views('template/header',$data);
+        $this->views('about/index',$data);
     }
 }
 

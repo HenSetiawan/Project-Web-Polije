@@ -32,10 +32,10 @@ class LoginModel {
 
     // there's no same email in database
     if (mysqli_num_rows($this->db->result) > 0) {
-     echo 
-     "<script>
-          alert('Email sudah digunakan');
-     </script>";
+      echo
+      "<script>
+      swal('email sudah digunakan');
+      </script>";
      return false;
    }
 
