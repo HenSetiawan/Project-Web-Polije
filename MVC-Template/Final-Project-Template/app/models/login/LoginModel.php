@@ -63,24 +63,13 @@ class LoginModel {
 		$mail->addAddress($email, $name);   
 
     // Set email format to HTML
-		$mail->isHTML(true);                        
+		$mail->isHTML(true);
+
+    // import file email
+    require_once './public/email/email.php'; 
 
 		$mail->Subject = 'Selamat Datang di KosKosang';
-		$mail->Body    = 
-                    	"<h1>
-                         <b>
-                         Selamat Datang $name, <br>
-                         Yuk Verifikasi Email Kamu !
-                         </b>
-                       </h1>
-                         <p>
-                           Yuk Konfirmasi kalau $email adalah benar 
-                           alamat email kamu dengan 
-                           klik halaman berikut untuk konfirmasi email
-                         <a href='$URL/login/v/$vkey'>
-                            Konfirmasi Akun Anda
-                         </a>
-                       </p>";
+		$mail->Body    = $email;
 
   	 // check an email has sent
      if ($mail->send()) {
@@ -112,10 +101,9 @@ class LoginModel {
   } // end of registration user 
 
 
-   	// verification email
-   	public function checkVerification($data)
-
-   	{
+   	  // verification email
+   	  public function checkVerification($data)
+   	  {
 
       // run source code if data has set
    		if (isset($data)) {
@@ -151,29 +139,45 @@ class LoginModel {
            return 0;	
          }
         }
-        }
-        // end of verification email
+       } // end of verification email
 
-        public function checkLogin($data)
+
+      // check data login
+      public function checkLogin($data)
         {
+         
+         // check session  
          if(!isset($_SESSION)){
           session_start();
          }
-          $email=$data['email'];
-          $password=$data['password'];
+         
+          // variables
+          $email = $data['email'];
+          $password = $data['password'];
 
+          // query to database
           $this->db->query("SELECT * FROM user WHERE email='$email'");
           if(mysqli_num_rows($this->db->result)){
-            $dataUser=$this->db->getData();
-            $isPasswordValid=password_verify($password,$dataUser['password']);
+            
+            // get data from database
+            $dataUser = $this->db->getData();
+            $isPasswordValid = password_verify($password,$dataUser['password']);
+            
+            // check password valid 
             if($isPasswordValid){
-              $_SESSION['loginUser']=true;
+
+              // turn on session
+              $_SESSION['loginUser'] = true;
+
+            // if not valid, show messege 
             }else{
               echo 
              "<script>
                 swal('Email atau password anda salah');
              </script>";
             }
+            
+          // if there's no in database, show messege a mistake 
           }else{
             echo 
            "<script>
@@ -181,7 +185,7 @@ class LoginModel {
            </script>";
           }
         }
-      } 
+      } // end of check login
 
       
 

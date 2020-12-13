@@ -24,7 +24,7 @@ class Login extends Controller{
 	public function v($vkey = null)
 	{
 
-		if ($vkey == null) {
+		if (is_null($vkey)) {
 			header("Location:" . BASEURL . "/home");
 		}
 	
