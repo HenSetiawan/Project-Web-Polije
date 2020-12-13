@@ -181,6 +181,19 @@ class LoginModel {
            </script>";
           }
         }
+
+
+        public function logOutUser()
+        {
+          if(!isset($_SESSION)){
+            session_start();
+           }
+           session_destroy();
+        }
+
+
+
+
       } 
 
       
