@@ -195,6 +195,4 @@ public function checkVerification($data)
 
       } 
 
-      
-
    ?>
