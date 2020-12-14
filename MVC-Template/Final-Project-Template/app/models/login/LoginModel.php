@@ -154,25 +154,31 @@ public function checkVerification($data)
       // insert to database
       $this->db->query("SELECT * FROM user WHERE vkey = '$vkey'");
 
+      $data["data"] = $this->db->getData();
+      $userId = $data["data"]["id_user"];
+
       if(mysqli_num_rows($this->db->result) == 1)  {
         
-        // password hash
-        $password = password_hash($password, PASSWORD_DEFAULT);
+      // password hash
+      $password = password_hash($password, PASSWORD_DEFAULT);
 
-        // insert to database
-        $this->db->query("UPDATE user SET password = '$password' WHERE vkey = '$vkey'");
+      // new code vkey
+      $newVkey = md5(time() + 60 . $password . uniqid());
 
-        echo 
+      // insert to database
+      $this->db->query("UPDATE user SET password = '$password', vkey = '$newVkey' WHERE id_user='$userId'");
+
+      echo 
           "<script>
             swal('Data berhasil diubah');
           </script>";
-      return 1;  
-      
+      return 1; 
+
       }else{
         
         echo 
         "<script>
-            swal('Data gagal diubah, kode verifikasi tidak tepat');
+            swal('Data gagal diubah, kode verifikasi tidak valid');
         </script>";
       return 0;
       }
