@@ -87,7 +87,6 @@ public function checkVerification($data)
                   }
             
           }
-
         }
     }
     
@@ -98,12 +97,13 @@ public function checkVerification($data)
       if(isset($_COOKIE['id'])){        
         $cookieId=$_COOKIE['id'];
         $this->db->query("SELECT * FROM user WHERE id_user ='$cookieId' ");
+        $dataUser=$this->db->getData();
 
         if(mysqli_num_rows($this->db->result)==1){
           if(!isset($_SESSION)){
             session_start();
           }
-            $_SESSION['loginUser']=true;
+            $_SESSION['loginUser']=$dataUser['id_user'];
 
         }
       }
@@ -116,7 +116,7 @@ public function checkVerification($data)
         $userId=$_SESSION['loginUser'];
         $this->db->query("SELECT * FROM user WHERE id_user ='$userId'");
         return $this->db->getData();
-      }elseif(isset($_COOKIE['id'])){
+      }else if(isset($_COOKIE['id'])){
         $cookieId=$_COOKIE['id'];
         $this->db->query("SELECT * FROM user WHERE id_user ='$cookieId' ");
         return $this->db->getData();
@@ -136,4 +136,3 @@ public function checkVerification($data)
     }
   } 
 
-?>

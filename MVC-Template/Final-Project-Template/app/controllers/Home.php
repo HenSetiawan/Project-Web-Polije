@@ -3,11 +3,11 @@
 class Home extends Controller {
     
     public function index(){
-        $data['title']="Cari Kos Mudah Dan Terpercaya";
-
         $modelLogin = $this->model("login","LoginModel");
-        $data['user']=$modelLogin->getDataUserActive();
+        $modelLogin->checkRememberMe();
 
+        $data['title']="Cari Kos Mudah Dan Terpercaya";
+        $data['user']=$modelLogin->getDataUserActive();
         
         $this->views('template/header',$data);
         $this->views('home/index');
@@ -20,6 +20,7 @@ class Home extends Controller {
 			header("Location:" . BASEURL . "/login");
         }
         $modelLogin = $this->model("login","LoginModel");
+        $modelLogin->checkRememberMe();
         $data['user']=$modelLogin->getDataUserActive();
         
         $data['title']="Cari Kos Mudah Dan Terpercaya";
