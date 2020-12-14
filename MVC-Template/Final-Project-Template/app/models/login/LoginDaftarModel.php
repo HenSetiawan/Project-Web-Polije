@@ -1,7 +1,75 @@
 <?php 
 
-$email = 
+class LoginDaftarModel {
 
+  // attr
+  public $db;
+  public $auth = AUTH;
+
+  // call database automatically
+  function __construct()
+  {
+    // instantiate
+    $this->db = new Database;
+  }
+
+// registration user
+public function insertDataUser($data)
+{
+
+  // variables
+  $idUser = uniqid();
+  $name = $data["name"];
+  $email = $data['email'];
+  $password = $data['password'];
+  $noHandphone = $data['handphone'];
+  $vkey = md5(time() . $email);
+  $token = 0;
+  $URL = 'http://localhost/Project-Web-Polije/MVC-Template/Final-Project-Template';   
+
+  // check email user
+  $this->db->query("SELECT * FROM user WHERE email = '$email'");
+
+  // there's no same email in database
+  if (mysqli_num_rows($this->db->result) > 0) {
+    echo
+    "<script>
+      swal('email sudah digunakan');
+    </script>";
+    return false;
+  }
+
+  // hash password
+  $password = password_hash($password, PASSWORD_DEFAULT);
+
+  // Send an email to user
+  require_once './app/phpmailer/PHPMailerAutoload.php';
+
+  $mail = new PHPMailer;
+
+  //$mail->SMTPDebug = 3;                                  // Enable verbose debug output
+
+  $mail->isSMTP();
+  $mail->SMTPKeepAlive = true;
+  $mail->Mailer = "smtp";                               // Set mailer to use SMTP
+  $mail->Host = "ssl://smtp.gmail.com";                // Specify main and backup SMTP servers
+  $mail->SMTPAuth = true;                             // Enable SMTP authentication
+  $mail->Username = 'mybisnis0101@gmail.com';        // SMTP username
+  $mail->Password =  $this->auth;                   // SMTP password
+  $mail->SMTPSecure = 'ssl';                       // Enable TLS encryption, `ssl` also accepted
+  $mail->Port = 465;                              // TCP port to connect to
+
+  $mail->setFrom('mybisnis0101@gmail.com', 'KosKosang');
+  $mail->addAddress($email, $name);   
+
+  // Set email format to HTML
+  $mail->isHTML(true);  
+   
+      
+  $mail->Subject = 'Selamat Datang di KosKosang';
+  $mail->Body    = 
+
+// begin messege
 "<!doctype html>
 <html>
   <head>
@@ -115,8 +183,9 @@ $email =
                   <table border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;'>
                     <tr>
                       <td style='font-family: sans-serif; font-size: 14px; vertical-align: top;'>
-                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>Hi there, $name</p>
-                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
+                        <img src='./public/image/kos.svg'>
+                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>Hi Selamat Datang, $name</p>
+                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>Yuk, konfirmasi kalau $email yang kamu berikan adalah benar alamat email kamu, dengan klik tombol berikut untuk konfirmasi email kamu</p>
                         <table border='0' cellpadding='0' cellspacing='0' class='btn btn-primary' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;'>
                           <tbody>
                             <tr>
@@ -132,8 +201,8 @@ $email =
                             </tr>
                           </tbody>
                         </table>
-                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
-                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>Good luck! Hope it works.</p>
+                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'><b>Perhatian !!</b> Link ini berlaku selama 24 jam. Abaikan pesan ini jika email ini bukan dikhususkan untuk anda</p>
+                        <p style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;'>Terima Kasih, Salam Admin</p>
                       </td>
                     </tr>
                   </table>
@@ -148,13 +217,13 @@ $email =
               <table border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;'>
                 <tr>
                   <td class='content-block' style='font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;'>
-                    <span class='apple-link' style='color: #999999; font-size: 12px; text-align: center;'>Software House, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href='http://i.imgur.com/CScmqnj.gif' style='text-decoration: underline; color: #999999; font-size: 12px; text-align: center;'>Unsubscribe</a>.
+                    <span class='apple-link' style='color: #999999; font-size: 12px; text-align: center;'>Software House, Jalan Mastrip, Jember, Indonesia</span>
+                    <br> Bukan anda ? <a href='http://i.imgur.com/CScmqnj.gif' style='text-decoration: underline; color: #999999; font-size: 12px; text-align: center;'>Unsubscribe</a>.
                   </td>
                 </tr>
                 <tr>
                   <td class='content-block powered-by' style='font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;'>
-                    Powered by <a href='http://htmlemail.io' style='color: #999999; font-size: 12px; text-align: center; text-decoration: none;'>HTMLemail</a>.
+                    Powered by <a href='$URL' style='color: #999999; font-size: 12px; text-align: center; text-decoration: none;'>KosKosang</a>.
                   </td>
                 </tr>
               </table>
@@ -168,6 +237,38 @@ $email =
       </tr>
     </table>
   </body>
-</html>"
+</html>";
+// end of messege
+  
+    // check an email has sent
+    if ($mail->send()) {
+    
+      // insert to database
+      $insertQuery = "INSERT INTO user VALUES 
+                    ('$idUser','$name','$email','$password','$noHandphone','$vkey', $token)";
+      
+      $this->db->query($insertQuery);
+
+      // show messege if true
+      echo 
+      "<script>
+        swal('Konfirmasi email berhasil dikirim');
+      </script>";
+      return 1;
+
+    }else{
+    
+    // show messege if false
+    echo 
+    "<script>
+        swal('Konfirmasi email gagal dikirim');
+    </script>";
+    return 0;
+
+    }
+  
+  } // end of registration user 
+
+}
 
 ?>

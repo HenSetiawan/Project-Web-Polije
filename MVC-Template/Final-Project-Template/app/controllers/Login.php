@@ -5,11 +5,11 @@ class Login extends Controller{
 	// Login -> index.php
 	public function index()
 	{
-		$modelDaftar = $this->model("login", "LoginModel");
-		$modelDaftar->checkRememberMe();
-		// if(isset($_SESSION['loginUser'])){
-		// 	header("Location:" . BASEURL . "/home");
-		// }
+		$LoginModel = $this->model("login", "LoginModel");
+		$LoginModel->checkRememberMe();
+		if(isset($_SESSION['loginUser'])){
+			header("Location:" . BASEURL . "/home");
+		}
 		$data['title'] = "Sign In";
 		$this->views('login/index', $data);
 
@@ -18,18 +18,21 @@ class Login extends Controller{
 
 	public function loginUser()
 	{
-		$modelDaftar = $this->model("login", "LoginModel");
+		$LoginModel = $this->model("login", "LoginModel");
 		if(isset($_SESSION['loginUser'])){
 			header("Location:" . BASEURL . "/home");
 		}
 
 		if(isset($_POST["submitLogin"])) {
-			$modelDaftar->checkLogin($_POST);
+
+			$LoginModel->checkLogin($_POST);
+
 			if(isset($_SESSION['loginUser'])){
 				header("Location:" . BASEURL . "/home");
 			}else{
 				header("Location:" . BASEURL . "/login");
 			}
+			
 		}
 	}
 
@@ -42,12 +45,12 @@ class Login extends Controller{
 			header("Location:" . BASEURL . "/home");
 		}
 	
-		$modelDaftar = $this->model("login", "LoginModel");
+		$LoginModel = $this->model("login", "LoginModel");
 
 		$data["title"] = "Email Verification";
 		$this->views('login/verifikasi', $data);
 
-		if ($modelDaftar->checkVerification($vkey) > 0) {
+		if ($LoginModel->checkVerification($vkey) > 0) {
 			echo 
 				"<center>
 					<div class='alert alert-success alert-dismissible fade show mt-3 col-md-6' role='alert'>
@@ -80,13 +83,13 @@ class Login extends Controller{
 	// Login -> daftar.php
 	public function daftar()
 	{
-		$modelDaftar = $this->model("login", "LoginModel");
+		$LoginModel = $this->model("login", "LoginDaftarModel");
 
 		$data['title'] = "Sign Up";
 		$this->views('login/daftar', $data);
 
 		if (isset($_POST["submit"])) {
-			if($modelDaftar->insertDataUser($_POST) > 0){
+			if($LoginModel->insertDataUser($_POST) > 0){
 				echo 
 				"<center>
 					<div class='alert alert-success alert-dismissible fade show mt-3 col-md-6' role='alert'>
@@ -112,8 +115,8 @@ class Login extends Controller{
 
 	public function logout()
 	{
-		$modelDaftar = $this->model("login", "LoginModel");
-		$modelDaftar->logOutUser();
+		$LoginModel = $this->model("login", "LoginModel");
+		$LoginModel->logOutUser();
 		header("Location:" . BASEURL . "/home");
 	}
 

@@ -5,6 +5,7 @@ class LoginModel {
   // attr
   public $db;
   public $auth = AUTH;
+
  
 
   // call database automatically
@@ -13,105 +14,6 @@ class LoginModel {
     // instantiate
     $this->db = new Database;
   }
-
-// registration user
-public function insertDataUser($data)
-{
-
-  // variables
-  $idUser = uniqid();
-  $name = $data["name"];
-  $email = $data['email'];
-  $password = $data['password'];
-  $noHandphone = $data['handphone'];
-  $vkey = md5(time() . $email);
-  $token = 0;
-  $URL = 'http://localhost/Project-Web-Polije/MVC-Template/Final-Project-Template';   
-
-  // check email user
-  $this->db->query("SELECT * FROM user WHERE email = '$email'");
-
-  // there's no same email in database
-  if (mysqli_num_rows($this->db->result) > 0) {
-    echo
-    "<script>
-    swal('email sudah digunakan');
-    </script>";
-    return false;
-  }
-
-  // hash password
-  $password = password_hash($password, PASSWORD_DEFAULT);
-
-  // Send an email to user
-  require_once './app/phpmailer/PHPMailerAutoload.php';
-
-  $mail = new PHPMailer;
-
-  //$mail->SMTPDebug = 3;                                  // Enable verbose debug output
-
-  $mail->isSMTP();
-  $mail->SMTPKeepAlive = true;
-  $mail->Mailer = "smtp";                               // Set mailer to use SMTP
-  $mail->Host = "ssl://smtp.gmail.com";					       // Specify main and backup SMTP servers
-  $mail->SMTPAuth = true;                             // Enable SMTP authentication
-  $mail->Username = 'mybisnis0101@gmail.com';        // SMTP username
-  $mail->Password =  $this->auth;                   // SMTP password
-  $mail->SMTPSecure = 'ssl';                       // Enable TLS encryption, `ssl` also accepted
-  $mail->Port = 465;                              // TCP port to connect to
-
-  $mail->setFrom('mybisnis0101@gmail.com', 'KosKosang');
-  $mail->addAddress($email, $name);   
-
-  // Set email format to HTML
-  $mail->isHTML(true);                        
-
-  $mail->Subject = 'Selamat Datang di KosKosang';
-  $mail->Body    = 
-                    "<h1>
-                        <b>
-                        Selamat Datang $name, <br>
-                        Yuk Verifikasi Email Kamu !
-                        </b>
-                      </h1>
-                        <p>
-                          Yuk Konfirmasi kalau $email adalah benar 
-                          alamat email kamu dengan 
-                          klik halaman berikut untuk konfirmasi email
-                        <a href='$URL/login/v/$vkey'>
-                          Konfirmasi Akun Anda
-                        </a>
-                      </p>";
-
-    // check an email has sent
-    if ($mail->send()) {
-      
-      // insert to database
-      $insertQuery = "INSERT INTO user VALUES 
-                    ('$idUser','$name','$email','$password','$noHandphone','$vkey', $token)";
-      
-      $this->db->query($insertQuery);
-
-      // show messege if true
-      echo 
-      "<script>
-        swal('Konfirmasi email berhasil dikirim');
-      </script>";
-      return 1;
-
-    }else{
-    
-    // show messege if false
-    echo 
-    "<script>
-        swal('Konfirmasi email gagal dikirim');
-    </script>";
-    return 0;
-
-  }
-
-} // end of registration user 
-
 
 // verification email
 public function checkVerification($data)
@@ -152,34 +54,43 @@ public function checkVerification($data)
         return 0;	
       }
     }
-    }
-        // end of verification email
+  } // end of verification email
+
 
     // method check login
     public function checkLogin($data)
     {
+
+      // turn session on
       if(!isset($_SESSION)){
         session_start();
       }
+        // variables
         $email=$data['email'];
         $password=$data['password'];
         $rememberMe=$data['remember-me'];
 
-        $this->db->query("SELECT * FROM user WHERE email='$email' AND token =1");
+        // query to database
+        $this->db->query("SELECT * FROM user WHERE email='$email' AND token=1");
         if(mysqli_num_rows($this->db->result)==1){
-          $dataUser=$this->db->getData();
-          $isPasswordValid=password_verify($password,$dataUser['password']);
+          
+          // get data from database 
+          $dataUser = $this->db->getData();
+          $isPasswordValid = password_verify($password,$dataUser['password']);
 
+          // set session
           if($isPasswordValid){
-            $_SESSION['loginUser']=true;
+            $_SESSION['loginUser'] =$dataUser['id_user'];
+            $this->dataUser=$this->db->getData();
             if(!$rememberMe==null){
-              setcookie('id',$dataUser['id_user'],time() + (86400 * 30),'/');
-            }
-            return $this->db->getData();
+                    setcookie('id',$dataUser['id_user'],time() + (86400 * 30),'/');
+                  }
+            
           }
+
         }
     }
-
+    
 
     // method check cookie
     public function checkRememberMe()
@@ -188,29 +99,41 @@ public function checkVerification($data)
         $cookieId=$_COOKIE['id'];
         $this->db->query("SELECT * FROM user WHERE id_user ='$cookieId' ");
 
-        if(mysqli_num_rows($this->db->result)){
+        if(mysqli_num_rows($this->db->result)==1){
           if(!isset($_SESSION)){
             session_start();
           }
             $_SESSION['loginUser']=true;
+
         }
-        return $this->db->getData();
-
       }
-
-
     }
+
+
+    public function getDataUserActive()
+    {
+      if(isset($_SESSION['loginUser'])){
+        $userId=$_SESSION['loginUser'];
+        $this->db->query("SELECT * FROM user WHERE id_user ='$userId'");
+        return $this->db->getData();
+      }elseif(isset($_COOKIE['id'])){
+        $cookieId=$_COOKIE['id'];
+        $this->db->query("SELECT * FROM user WHERE id_user ='$cookieId' ");
+        return $this->db->getData();
+      }
+    }
+
 
     // method logout
     public function logOutUser()
     {
+      // delete session
       if(!isset($_SESSION)){
         session_start();
-        }
+      }
         session_destroy();
         setcookie('id',FALSE,time()-3600,'/');
     }
+  } 
 
-      } 
-
-   ?>
+?>

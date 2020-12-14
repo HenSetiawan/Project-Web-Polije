@@ -5,8 +5,9 @@ class Home extends Controller {
     public function index(){
         $data['title']="Cari Kos Mudah Dan Terpercaya";
 
-        $modelDaftar = $this->model("login", "LoginModel");
-        $data['user']=$modelDaftar->checkRememberMe();
+        $modelLogin = $this->model("login","LoginModel");
+        $data['user']=$modelLogin->getDataUserActive();
+
         
         $this->views('template/header',$data);
         $this->views('home/index');
@@ -18,8 +19,8 @@ class Home extends Controller {
         if(!isset($_SESSION['loginUser'])){
 			header("Location:" . BASEURL . "/login");
         }
-        $modelDaftar = $this->model("login", "LoginModel");
-        $data['user']=$modelDaftar->checkRememberMe();
+        $modelLogin = $this->model("login","LoginModel");
+        $data['user']=$modelLogin->getDataUserActive();
         
         $data['title']="Cari Kos Mudah Dan Terpercaya";
         $this->views('template/header',$data);

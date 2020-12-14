@@ -6,8 +6,8 @@ class About extends Controller{
     {
 
         $data['title']="Cari Kos Mudah Dan Terpercaya";
-        $modelDaftar = $this->model("login", "LoginModel");
-        $data['user']=$modelDaftar->checkRememberMe();
+        $modelLogin = $this->model("login","LoginModel");
+        $data['user']=$modelLogin->getDataUserActive();
         
         $this->views('template/header',$data);
         $this->views('about/index',$data);
