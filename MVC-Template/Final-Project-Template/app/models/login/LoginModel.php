@@ -95,6 +95,7 @@ public function checkVerification($data)
         "<script>
             swal('Email atau password anda salah');
         </script>";
+        
         $this->db->query("SELECT * FROM user WHERE email='$email' AND token =1");
         if(mysqli_num_rows($this->db->result)==1){
           $dataUser=$this->db->getData();
