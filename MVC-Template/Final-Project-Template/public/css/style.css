@@ -112,8 +112,6 @@
 }
 
 
-
-
 /*DIBAWAH INI CSS DEKSTOP  */
 
 @media only screen and (min-width: 768px) {
@@ -157,6 +155,8 @@
         display: inline-block;
         width: 100%;
     }
+
+
     
   }
 

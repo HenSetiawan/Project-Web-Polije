@@ -22,7 +22,7 @@
 
 <div class="row mt-5">
 <div class="col-md-3 mb-3">
-      <a href="<?=BASEURL?>/home/detail/1">
+    <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
           <div class="card" >
           <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -36,7 +36,7 @@
 </div>
 
 <div class="col-md-3 mb-3">
-  <a href="<?=BASEURL?>/home/detail/1">
+  <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
       <div class="card" >
       <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
       <div class="card-body">
@@ -52,7 +52,7 @@
 
 
 <div class="col-md-3 mb-3">
-      <a href="<?=BASEURL?>/home/detail/1">
+      <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
           <div class="card" >
           <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -66,7 +66,7 @@
 </div>
 
 <div class="col-md-3 mb-3">
-  <a href="<?=BASEURL?>/home/detail/1">
+  <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
       <div class="card" >
       <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
       <div class="card-body">
@@ -79,8 +79,9 @@
     </a>
 </div>
 
+<div class="row mt-5">
 <div class="col-md-3 mb-3">
-      <a href="<?=BASEURL?>/home/detail/1">
+    <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
           <div class="card" >
           <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -94,7 +95,7 @@
 </div>
 
 <div class="col-md-3 mb-3">
-  <a href="<?=BASEURL?>/home/detail/1">
+  <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
       <div class="card" >
       <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
       <div class="card-body">
@@ -107,8 +108,10 @@
     </a>
 </div>
 
+
+
 <div class="col-md-3 mb-3">
-      <a href="<?=BASEURL?>/home/detail/1">
+      <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
           <div class="card" >
           <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -122,7 +125,7 @@
 </div>
 
 <div class="col-md-3 mb-3">
-  <a href="<?=BASEURL?>/home/detail/1">
+  <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
       <div class="card" >
       <img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" class="card-img-top" alt="...">
       <div class="card-body">

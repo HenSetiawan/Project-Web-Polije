@@ -37,10 +37,10 @@
        <?php if(isset($_SESSION['loginUser'])) { ?>
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline small"><?= $data['user']['nama'] ; ?></span>
+              <div id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-lg-inline small nav-link"><?= $data['user']['nama'] ; ?></span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" width="32px" height="32px">
-              </a>
+            </div>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
                 <div class="dropdown-divider"></div>
