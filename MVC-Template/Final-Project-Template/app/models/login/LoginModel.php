@@ -134,5 +134,48 @@ public function checkVerification($data)
         session_destroy();
         setcookie('id',FALSE,time()-3600,'/');
     }
+
+    // method editpassword from forgotpassword
+    public function editpassword($vkey)
+    {
+      // variables
+      $password = $_POST["password1"];
+      $password2 = $_POST["password2"];
+
+      // check value of password
+      if ($password != $password2) {
+        echo 
+          "<script>
+            swal('Password tidak cocok');
+          </script>";
+      return false;    
+      }
+
+      // insert to database
+      $this->db->query("SELECT * FROM user WHERE vkey = '$vkey'");
+
+      if(mysqli_num_rows($this->db->result) == 1)  {
+        
+        // password hash
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        // insert to database
+        $this->db->query("UPDATE user SET password = '$password' WHERE vkey = '$vkey'");
+
+        echo 
+          "<script>
+            swal('Data berhasil diubah');
+          </script>";
+      return 1;  
+      
+      }else{
+        
+        echo 
+        "<script>
+            swal('Data gagal diubah, kode verifikasi tidak tepat');
+        </script>";
+      return 0;
+      }
+    }
   } 
 

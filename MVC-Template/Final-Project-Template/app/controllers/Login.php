@@ -78,6 +78,31 @@ class Login extends Controller{
 	{
 		$data['title'] = "Forgot Password";
 		$this->views('login/lupa_password', $data);
+
+		$LoginModel = $this->model("login", "LupaPasswordModel");
+		if (isset($_POST["submit"])) {
+			if ($LoginModel->forgotPassword($_POST) > 0){
+			echo 
+				"<center>
+					<div class='alert alert-success alert-dismissible fade show mt-3 col-md-6' role='alert'>
+						<span> 
+							<strong>Email berhasil dikirim</strong>
+						</span>  
+					</div>
+				</center>";
+
+			}else{
+				echo 
+				"<center>
+					<div class='alert alert-danger alert-dismissible fade show mt-3 col-md-6' role='alert'>
+						<span> 
+							<strong>Tidak ada satupun data yang cocok</strong>
+						</span>    
+					</div>
+				</center>";
+			}
+		}
+		
 	}
 
 	// Login -> daftar.php
@@ -104,7 +129,7 @@ class Login extends Controller{
 				"<center>
 					<div class='alert alert-warning alert-dismissible fade show mt-3 col-md-6' role='alert'>
 						<span>Data gagal ditambahkan, 
-							<strong> Gagal Mengirim Email</strong>
+							<strong> Gagal mengirim email </strong>
 						</span>    
 					</div>
 				</center>";
@@ -118,6 +143,43 @@ class Login extends Controller{
 		$LoginModel = $this->model("login", "LoginModel");
 		$LoginModel->logOutUser();
 		header("Location:" . BASEURL . "/home");
+	}
+
+	// edit from forgot password
+	public function ece4797eaf5e($vkey = null)
+	{
+		if (is_null($vkey)) {
+			header("Location: " . BASEURL . "/home");
+		}
+
+		$data["title"] = 'Forgot Password';
+
+		$this->views('login/ubah_password', $data);
+
+		$LoginModel = $this->model("login", "LoginModel");
+
+		if(isset($_POST["submit"])){
+			if($LoginModel->editPassword($vkey) > 0){
+				echo 
+				"<center>
+					<div class='alert alert-success alert-dismissible fade show mt-3 col-md-6' role='alert'>
+						<span>
+							<strong>Password berhasil diubah</strong>
+						</span>  
+					</div>
+				</center>";
+
+			}else{
+				echo 
+				"<center>
+					<div class='alert alert-warning alert-dismissible fade show mt-3 col-md-6' role='alert'>
+						<span>
+							<strong>Password gagal diubah</strong>
+						</span>    
+					</div>
+				</center>";
+			}
+		}
 	}
 
 }

@@ -16,7 +16,7 @@
 
     <!-- navbar login -->
     <div class="row-lg-12 fixed-top" >
-     <div class="row ">
+       <div class="row ">
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
             <div class="container ml-2 mr-2">
                 <a class="navbar-brand " href="<?=BASEURL;?>/home">
@@ -36,8 +36,8 @@
     <!-- login page -->
     <div class="row">
 
-     <!-- mobile login page -->
-     <div class="col-md-4 login-page">
+       <!-- mobile login page -->
+       <div class="col-md-4 login-page">
         <div class="row">
             <div class="col-md-6">
                 <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid mt-2">
@@ -46,8 +46,8 @@
 
         <div class="row login-title mt-4">
             <div class="col-md-12">
-                <h2>Lupa Password</h2>
-                <p class=" mt-3">Gunakan email untuk melakukan lupa password</p>
+                <h2 class="">Ubah Password</h2>
+                <p class=" mt-3">Ayo bergabung dengan kami kembali sekarang juga</p>
             </div>
         </div>
 
@@ -55,20 +55,18 @@
         <form action="" method="POST" >
             <div class="row form-login" >
                 <div class="col-md-12">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="alamat@email" id="email">
+                    <label for="password">Password Baru</label>
+                    <input type="password" name="password1" class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="masukan password" id="email">
+                </div>
+                <div class="col-md-12">
+                    <label for="password">Konfirmasi Password</label>
+                    <input type="password" name="password2"  class="form-control shadow-sm rounded-pill" style="width: 90%;" placeholder="masukan password" id="password">
                 </div>
             </div>
 
-            <div class="row mt-3 button-login">
+            <div class="row mt-2 button-login">
                 <div class="col">
-                    <button class="btn btn-success btn-sm rounded-pill" name="submit">Lupa Password</button>
-                </div>
-            </div>
-
-            <div class="row option-login">
-                <div class="col ml-2">
-                    <a href="<?=BASEURL?>/login" class="text-decoration-none">Kembali Ke halaman login</a>
+                    <button class="btn btn-success btn-sm rounded-pill" type="submit" name="submit">Ubah Password</button>
                 </div>
             </div>
         </form>
@@ -78,7 +76,7 @@
 
     <!-- hero image desktop -->
     <div class="col-md-8 hero-login">
-        <img src="<?=BASEURL;?>/public/image/auth.svg" class="img-fluid">
+        <img src="<?=BASEURL;?>/public/image/login.svg" class="img-fluid">
     </div>
     <!--end hero image desktop -->
 </div>
@@ -86,6 +84,5 @@
 
 </div>
 <!-- end container -->
-
 </body>
 </html>
