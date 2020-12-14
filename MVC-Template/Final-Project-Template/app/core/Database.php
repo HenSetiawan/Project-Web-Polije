@@ -9,7 +9,7 @@
         public $dbPassword = DB_PASSWORD;
 
         // Connect to database automatically
-        public function _construct()
+        public function __construct()
         {
           $this->link = mysqli_connect($this->dbHost, $this->dbUser, $this->dbPassword, $this->dbName);
         }
