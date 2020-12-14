@@ -15,47 +15,46 @@
 
 <!-- navbar home -->
 <div class="row-lg-12 fixed-top" >
- <div class="row">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
-        <div class="container ml-2 mr-2">
+<div class="row">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
+    <div class="container ml-2">
         <a class="navbar-brand " href="<?=BASEURL;?>/home">
             <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid" alt="logo" width="160">
         </a>
-        <button class="btn-nav btn btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="btn-nav btn btn-outline-light ml-5" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
-            <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
-
-        <?php if(!isset($_SESSION['loginUser'])){ ?>
-            <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>
-       <?php } ?>
-
-       <?php if(isset($_SESSION['loginUser'])) { ?>
+                <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
+                <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
+                <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
+                <?php if(!isset($_SESSION['loginUser'])){ ?>
+                    <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>
+                <?php } ?>
+            </div>
+        </div>
+        
+        <ul class="navbar-nav mr-4">
+        <?php if(isset($_SESSION['loginUser'])) { ?>
+            <span class="d-lg-inline small user-name"><?= $data['user']['nama'] ; ?></span> 
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow ml-3">
-              <div id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-lg-inline small nav-link"><?= $data['user']['nama'] ; ?></span> 
+            <li class="nav-item dropdown no-arrow" style="list-style: none;">
+              <div id="userDropdown" role="button" data-toggle="dropdown" >
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" width="32px" height="32px">
             </div>
               <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
-                <!-- <div class="dropdown-divider"></div> -->
+              <div class="dropdown-menu shadow logout-user">
                 <a class="dropdown-item" href="<?=BASEURL?>/login/logout">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-secondary fs-6"></i>
                   Logout
                 </a>
               </div>
             </li>
-        <?php  } ?>
-            
-            </div>
-        </div>
+            <?php  } ?>
+        </ul>
     </div>
-    </nav>
+
+</nav>
 </div>
 </div>
     <!--end navbar home -->

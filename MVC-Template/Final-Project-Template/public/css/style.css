@@ -111,7 +111,17 @@
     width: 50%;
 }
 
+.user-name{
+    display: none !important;
+}
+.logout-user{
+    position: absolute !important;
+    left: -120px;
+}
 
+.navbar-collapse.show +ul{
+    display: none !important;
+}
 /*DIBAWAH INI CSS DEKSTOP  */
 
 @media only screen and (min-width: 768px) {
@@ -155,6 +165,10 @@
         display: inline-block;
         width: 100%;
     }
+
+.user-name{
+    display: inline !important;
+}
 
 
     
