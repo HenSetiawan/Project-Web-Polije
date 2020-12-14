@@ -146,7 +146,7 @@ class Login extends Controller{
 	}
 
 	// edit from forgot password
-	public function ece4797eaf5e($vkey = null)
+	public function resetPassword($vkey = null)
 	{
 		if (is_null($vkey)) {
 			header("Location: " . BASEURL . "/home");

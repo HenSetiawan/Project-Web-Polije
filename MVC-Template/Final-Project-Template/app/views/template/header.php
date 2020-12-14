@@ -36,9 +36,9 @@
 
        <?php if(isset($_SESSION['loginUser'])) { ?>
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
+            <li class="nav-item dropdown no-arrow ml-3">
               <div id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-lg-inline small nav-link"><?= $data['user']['nama'] ; ?></span>
+                <span class="d-lg-inline small nav-link"><?= $data['user']['nama'] ; ?></span> 
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" width="32px" height="32px">
             </div>
               <!-- Dropdown - User Information -->
@@ -56,9 +56,9 @@
         </div>
     </div>
     </nav>
-    </div>
 </div>
-<!--end navbar home -->
+</div>
+    <!--end navbar home -->
 
     <!-- start container -->
 <div class="container">
