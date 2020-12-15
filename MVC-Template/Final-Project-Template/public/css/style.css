@@ -113,7 +113,9 @@
 
 .user-name{
     display: none !important;
+    transition: none !important;
 }
+
 .logout-user{
     position: absolute !important;
     left: -120px;

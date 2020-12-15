@@ -4,15 +4,42 @@
 
         public function index()
         {
-            
+            $LoginModel=$this->model('dashboard','LoginModel');
+
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
+            $data['dataAdmin']=$LoginModel->getDataAdmin();
             $this->views('template-dashboard/header');
-            $this->views('dashboard/index');
+            $this->views('dashboard/index',$data);
             $this->views('template-dashboard/footer');
         }
 
-        // controller dashboard mitra
+        public function login()
+        {
+            if(isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard");
+            }
+            $data['title']="Login Dashboard Admin";
+            $this->views('dashboard/login',$data);
+        }
+
+        public function loginAdmin()
+        {
+            $LoginModel=$this->model('dashboard','LoginModel');
+            if(isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard");
+            }
+            if(isset($_POST['submit-login-admin'])){
+                $LoginModel->checkLogin($_POST);
+            }
+        }
+
         public function mitra()
         {
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
             $mitraModelClass = $this->model("dashboard","MitraModel");
             $data['mitra'] = $mitraModelClass->getAllMitra();
             
@@ -26,6 +53,9 @@
 
         public function createOrUpdateMitra()
         {
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
             $mitraModelClass = $this->model("dashboard","MitraModel");
             if(isset($_POST['submitMitra'])){
                 $mitraModelClass->insertDataMitra($_POST);
@@ -43,6 +73,9 @@
 
         public function DeleteMitra($id)
         {
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
             $mitraModelClass = $this->model("dashboard","MitraModel");
             $mitraModelClass->deleteMitra($id);
             $baseUrl=BASEURL;
@@ -52,6 +85,9 @@
 
         public function getMitraById($id)
         {
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
             $mitraModelClass = $this->model("dashboard","MitraModel");
             $result=json_encode( $mitraModelClass->getMitraById($id));
             echo $result;
@@ -59,9 +95,11 @@
         }
 
 
-
         public function blog()
         {
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
             $this->views('template-dashboard/header');
             $this->views('dashboard/blog');
             $this->views('template-dashboard/footer');

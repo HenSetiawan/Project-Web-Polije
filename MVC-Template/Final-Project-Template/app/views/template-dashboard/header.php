@@ -56,6 +56,12 @@
         Addons
       </div>
 
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?=BASEURL;?>/dashboard/mitra">
+          <i class="fas fa-fw fa-table"></i>
+          <span>KosKosan</span></a>
+      </li>
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="<?= BASEURL; ?>/dashboard/blog">
@@ -68,6 +74,13 @@
         <a class="nav-link" href="<?=BASEURL;?>/dashboard/mitra">
           <i class="fas fa-fw fa-table"></i>
           <span>Mitra</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?=BASEURL;?>/dashboard/mitra">
+          <i class="fas fa-fw fa-table"></i>
+          <span>User</span></a>
       </li>
 
       <!-- Divider -->

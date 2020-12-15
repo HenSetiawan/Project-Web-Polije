@@ -35,13 +35,13 @@
             </div>
         </div>
         
-        <ul class="navbar-nav mr-4">
+        <ul class="navbar-nav navbar-brand mr-4">
         <?php if(isset($_SESSION['loginUser'])) { ?>
-            <span class="d-lg-inline small user-name"><?= $data['user']['nama'] ; ?></span> 
+            <span class="d-lg-inline small user-name mr-1"><?php echo( (explode(" ",$data['user']['nama'])[0])) ?></span> 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow" style="list-style: none;">
               <div id="userDropdown" role="button" data-toggle="dropdown" >
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" width="32px" height="32px">
+                <img class="img-profile rounded-circle" src="https://dashboard.prakerja.go.id/images/avatar-placeholder.png" width="32px" height="32px">
             </div>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu shadow logout-user">
