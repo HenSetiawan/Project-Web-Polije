@@ -46,12 +46,6 @@
             header("Location:".BASEURL."/dashboard/login");
         }
 
-
-        public function forgotPassword()
-        {
-            $this->views("dashboard/forgot_password");
-        }
-
         public function mitra()
         {
             $LoginModel=$this->model('dashboard','LoginModel');

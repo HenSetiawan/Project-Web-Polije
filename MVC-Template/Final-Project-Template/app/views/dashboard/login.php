@@ -54,9 +54,6 @@
                                 <button type="submit" class="btn btn-primary btn-user btn-block" name="submit-login-admin">Login</button>
                             </form>
                             <hr>
-                            <div class="text-center">
-                                <a class="small" href="<?=BASEURL?>/dashboard/forgotPassword">Forgot Password?</a>
-                            </div>
                         </div>
                     </div>
                 </div>
