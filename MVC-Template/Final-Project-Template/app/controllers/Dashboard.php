@@ -20,6 +20,7 @@
             if(isset($_SESSION['loginAdmin'])){
                 header("Location:".BASEURL."/dashboard");
             }
+            
             $data['title']="Login Dashboard Admin";
             $this->views('dashboard/login',$data);
         }
