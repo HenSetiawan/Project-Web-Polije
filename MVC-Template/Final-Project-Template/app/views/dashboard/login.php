@@ -51,18 +51,11 @@
                                     <input type="password" class="form-control form-control-user"
                                         id="exampleInputPassword" placeholder="Password" name="password">
                                 </div>
-                                <div class="form-group">
-                                    <div class="custom-control custom-checkbox small">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="remember-me">
-                                        <label class="custom-control-label" for="customCheck">Remember
-                                            Me</label>
-                                    </div>
-                                </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block" name="submit-login-admin">Login</button>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                <a class="small" href="<?=BASEURL?>/dashboard/forgotPassword">Forgot Password?</a>
                             </div>
                         </div>
                     </div>
@@ -76,15 +69,6 @@
 
 </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 

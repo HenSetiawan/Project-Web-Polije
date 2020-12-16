@@ -10,7 +10,7 @@
                 header("Location:".BASEURL."/dashboard/login");
             }
             $data['dataAdmin']=$LoginModel->getDataAdmin();
-            $this->views('template-dashboard/header');
+            $this->views('template-dashboard/header',$data);
             $this->views('dashboard/index',$data);
             $this->views('template-dashboard/footer');
         }
@@ -32,17 +32,36 @@
             }
             if(isset($_POST['submit-login-admin'])){
                 $LoginModel->checkLogin($_POST);
+                header("Location:".BASEURL."/dashboard");
+            }else{
+                header("Location:".BASEURL."/dashboard/login");
             }
+        }
+
+        public function logout()
+        {
+            $LoginModel=$this->model('dashboard','LoginModel');
+            $LoginModel->logoutAdmin();
+            header("Location:".BASEURL."/dashboard/login");
+        }
+
+
+        public function forgotPassword()
+        {
+            $this->views("dashboard/forgot_password");
         }
 
         public function mitra()
         {
+            $LoginModel=$this->model('dashboard','LoginModel');
             if(!isset($_SESSION['loginAdmin'])){
                 header("Location:".BASEURL."/dashboard/login");
             }
             $mitraModelClass = $this->model("dashboard","MitraModel");
             $data['mitra'] = $mitraModelClass->getAllMitra();
-            
+
+            $data['dataAdmin']=$LoginModel->getDataAdmin();
+            $this->views('template-dashboard/header',$data);
             $this->views('template-dashboard/header');
             $this->views('dashboard/mitra',$data);
             $this->views('template-dashboard/footer');
@@ -97,10 +116,13 @@
 
         public function blog()
         {
+            $LoginModel=$this->model('dashboard','LoginModel');
             if(!isset($_SESSION['loginAdmin'])){
                 header("Location:".BASEURL."/dashboard/login");
             }
-            $this->views('template-dashboard/header');
+            $data['dataAdmin']=$LoginModel->getDataAdmin();
+
+            $this->views('template-dashboard/header',$data);
             $this->views('dashboard/blog');
             $this->views('template-dashboard/footer');
         }

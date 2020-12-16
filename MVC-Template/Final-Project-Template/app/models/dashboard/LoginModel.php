@@ -29,4 +29,9 @@
             }
         }
 
+        public function logoutAdmin()
+        {
+            session_destroy();
+        }
+
     }
