@@ -12,6 +12,7 @@ class About extends Controller{
         
         $this->views('template/header',$data);
         $this->views('about/index',$data);
+        $this->views('template/footer');
     }
 }
 
