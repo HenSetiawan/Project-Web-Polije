@@ -90,6 +90,59 @@
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-md-12">
+            <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Jenis</th>
+                                    <th>Harga</th>
+                                    <th>Deskripsi</th>
+                                    <th>Gambar 1</th>
+                                    <th>Gambar 2</th>
+                                    <th>Gambar 3</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Jenis</th>
+                                    <th>Harga</th>
+                                    <th>Deskripsi</th>
+                                    <th>Gambar 1</th>
+                                    <th>Gambar 2</th>
+                                    <th>Gambar 3</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Stranger From the Hell</td>
+                                    <td>Bondowoso</td>
+                                    <td>Campur</td>
+                                    <td>300.000</td>
+                                    <td>Kos ini sangat bagus</td>
+                                    <td><img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" width="50px" height="50px"></td>
+                                    <td><img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" width="50px" height="50px"></td>
+                                    <td><img src="<?=BASEURL; ?>/public/image/kamarkos.jpg" width="50px" height="50px"></td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-danger btn-block">Hapus</button>
+
+                                        <button  class="btn btn-sm btn-warning btn-block">Ubah</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+          </div>
+
 
         </div>
         <!-- /.container-fluid -->
