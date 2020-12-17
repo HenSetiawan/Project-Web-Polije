@@ -50,7 +50,13 @@
                 <p class=" mt-3">Bagi kamu yang sudah terdaftar silahkan login</p>
             </div>
         </div>
-
+        <?php if(isset($_SESSION['isUserNotFound'])){ ?>
+            <div class='alert alert-danger alert-dismissible fade show ' role='alert'>
+                <span> 
+                    <strong>Akun Anda Tidak Ditemukan</strong>
+                </span>  
+            </div>
+       <?php } ?>
         <!-- form login -->
         <form action="<?=BASEURL?>/login/loginUser" method="POST" >
             <div class="row form-login" >

@@ -40,16 +40,17 @@ class Mitra extends Controller{
 				header("Location:" . BASEURL . "/mitra");
 			}
 
-				if (isset($_POST["submitmitra"])) {
-
-					$LoginModel->checkLogin($_POST);
-					
+			if (isset($_POST["submitmitra"])) {
+				$LoginModel->checkLogin($_POST);	
 				if(isset($_SESSION['loginMitra'])){
 					header("Location:" . BASEURL . "/mitra");
 				}else{
 					header("Location:" . BASEURL . "/mitra/login");
+					$_SESSION['isMitraNotFound']=true;
 				}
-        	  } 
+			} else{
+				header("Location:" . BASEURL . "/mitra/login");
+			}
 		}
 
 

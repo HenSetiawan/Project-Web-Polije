@@ -31,8 +31,10 @@ class Login extends Controller{
 				header("Location:" . BASEURL . "/home");
 			}else{
 				header("Location:" . BASEURL . "/login");
+				$_SESSION['isUserNotFound']=true;
 			}
-			
+		}else{
+			header("Location:" . BASEURL . "/login");
 		}
 	}
 

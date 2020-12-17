@@ -27,8 +27,16 @@
 <div class="container">
 
         <!-- Outer Row -->
+
 <div class="row justify-content-center">
 
+    <?php if(isset($_SESSION['isMitraNotFound'])){ ?>
+        <div class='alert alert-danger alert-dismissible fade show mt-5 col-md-6' role='alert'>
+                <span> 
+                    <strong>Akun Anda Tidak Ditemukan</strong>
+                </span>  
+            </div>
+    <?php  } ?>
     <div class="col-xl-10 col-lg-12 col-md-9">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -74,16 +82,6 @@
 </div>
 
 </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
