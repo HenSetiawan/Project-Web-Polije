@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 10, 2020 at 11:05 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Host: localhost
+-- Waktu pembuatan: 21 Des 2020 pada 15.27
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,10 +34,17 @@ CREATE TABLE `admin` (
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `nama`, `email`, `password`) VALUES
+('E41191280', 'Hendy Setiawan', 'hendystyawan74@gmail.com', 'lavender');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog`
+-- Struktur dari tabel `blog`
 --
 
 CREATE TABLE `blog` (
@@ -52,7 +58,7 @@ CREATE TABLE `blog` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kos_kosan`
+-- Struktur dari tabel `kos_kosan`
 --
 
 CREATE TABLE `kos_kosan` (
@@ -61,13 +67,24 @@ CREATE TABLE `kos_kosan` (
   `nama_kos` varchar(255) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `jenis` varchar(255) NOT NULL,
-  `harga` int(100) NOT NULL
+  `harga` int(100) NOT NULL,
+  `gambar_1` varchar(255) DEFAULT NULL,
+  `gambar_2` varchar(255) DEFAULT NULL,
+  `gambar_3` varchar(255) DEFAULT NULL,
+  `deskripsi` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kos_kosan`
+--
+
+INSERT INTO `kos_kosan` (`id_kos`, `id_pemilik`, `nama_kos`, `alamat`, `jenis`, `harga`, `gambar_1`, `gambar_2`, `gambar_3`, `deskripsi`) VALUES
+('431608560109', 'E41191280', 'Melati', 'Jember', 'putra', 250000, '73871bing.png', '581006indihome.png', '147849inner-join.png', 'test data');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pemilik_kos`
+-- Struktur dari tabel `pemilik_kos`
 --
 
 CREATE TABLE `pemilik_kos` (
@@ -76,21 +93,23 @@ CREATE TABLE `pemilik_kos` (
   `alamat` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `no_hp` varchar(255) NOT NULL
+  `no_hp` varchar(255) NOT NULL,
+  `vkey` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pemilik_kos`
+-- Dumping data untuk tabel `pemilik_kos`
 --
 
-INSERT INTO `pemilik_kos` (`id_pemilik`, `nama`, `alamat`, `email`, `password`, `no_hp`) VALUES
-('001', 'Hendy Setiawan', 'Ngawi', 'Hendy@gmail.com', 'admin', '083848939627'),
-('E41191107', 'Dwi Rifki Novianto', 'Tangerang', 'remanagedata@gmail.com', '$2y$10$VHMwpAH1fFctdp870.1b9etUyg9vCuVB6FGVmJtRj82IGMTKZ0Z1y', '083872523688');
+INSERT INTO `pemilik_kos` (`id_pemilik`, `nama`, `alamat`, `email`, `password`, `no_hp`, `vkey`) VALUES
+('589385839634', 'Ardan Venora', 'Bondowoso', 'Hibonachi@gmail.com', '$2y$10$W7vjnrDQGR3D0IlUcTjbYuM0nPEJZHD50s/B4AKScgPtxR2xQWp4q', '08976576768', 'e72566578c93c3a4e18bb44bebc941ba'),
+('E41191280', 'Hendy setiawan', 'Ngawi', 'hendystyawan74@gmail.com', '$2y$10$a/L0C5kxqyhXdI.v3F1NJeVx6fZ1BeRfHEUj18bB3gDM04xc9Am7e', '083844984836', '7d9fb772bade721dff4e8457dda17940'),
+('E6679845', 'Dwi Rifky N', 'Bekasi', 'DwiRifky@gmail.com', '$2y$10$sCbmmu0ZOmXOZuMNAopJWe.LBLjixqYt0HqYMCOZRXyjmGGnQQKLe', '08976576768', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -104,41 +123,42 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `email`, `password`, `no_handphone`, `vkey`, `token`) VALUES
-('5fd1f264e788a', 'Dwi Rifki Novianto', 'dwirifkinovianto10@gmail.com', '$2y$10$Sp7ZIsrZMiHg6i1DRIrMFerKR2YuhKRkuxqFQyrHfAXof3yqdzGBy', '083872523688', 'd30387c3809e82e526651313b1184781', 0);
+('5fd1f264e788a', 'Dwi Rifki Novianto', 'dwirifkinovianto10@gmail.com', '$2y$10$Sp7ZIsrZMiHg6i1DRIrMFerKR2YuhKRkuxqFQyrHfAXof3yqdzGBy', '083872523688', 'd30387c3809e82e526651313b1184781', 0),
+('5fd5d0da6946e', 'Hendy setiawan', 'hendystyawan74@gmail.com', '$2y$10$195.CmRd29us25uRrpWoJ.q89q9OBjTcSPhvD5Yj7IaXQf5f7dZHS', '083848939627', 'aec3243f8dad30889c81944eae34b67f', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `kos_kosan`
+-- Indeks untuk tabel `kos_kosan`
 --
 ALTER TABLE `kos_kosan`
   ADD PRIMARY KEY (`id_kos`),
   ADD KEY `kos_kosan_fk0` (`id_pemilik`);
 
 --
--- Indexes for table `pemilik_kos`
+-- Indeks untuk tabel `pemilik_kos`
 --
 ALTER TABLE `pemilik_kos`
   ADD PRIMARY KEY (`id_pemilik`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `kos_kosan`
+-- Ketidakleluasaan untuk tabel `kos_kosan`
 --
 ALTER TABLE `kos_kosan`
   ADD CONSTRAINT `kos_kosan_fk0` FOREIGN KEY (`id_pemilik`) REFERENCES `pemilik_kos` (`id_pemilik`);
