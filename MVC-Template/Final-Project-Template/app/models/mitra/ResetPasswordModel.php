@@ -4,6 +4,7 @@
 
         public $db;
         public $auth = AUTH;
+        public $URL=BASEURL;
 
         public function __construct()
         {
@@ -25,7 +26,7 @@
         {
             $email = $data["email"];
             $vkey = md5(time() + 1440 . $email . uniqid());
-            $URL = 'http://localhost/Project-Web-Polije/MVC-Template/Final-Project-Template';
+            $URL = $this->URL;
 
             $this->db->query("SELECT * FROM pemilik_kos WHERE email='$email'");
             $dataMitra=$this->db->getData();

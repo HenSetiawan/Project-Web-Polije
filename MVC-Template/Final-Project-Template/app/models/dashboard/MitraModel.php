@@ -4,6 +4,7 @@ class MitraModel
 {
 
     public $db;
+    public $passwordDefault="mitra123";
 
     function __construct()
     {
@@ -20,17 +21,21 @@ class MitraModel
 
     public function insertDataMitra($data)
     {
+       
         $noKtp = $data['noKtp'];
         $name = $data['name'];
         $alamat = $data['alamat'];
         $email = $data['email'];
         $noHandphone = $data['noHandphone'];
-        $password = password_hash($data['password'], PASSWORD_DEFAULT);
+        $password = password_hash($this->passwordDefault, PASSWORD_DEFAULT);
+
 
         $insertQuery = "INSERT INTO pemilik_kos
-                        VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone')";
+                        VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone','null)";
 
-        $this->db->query($insertQuery);
+ 
+            $this->db->query($insertQuery);
+       
     }
 
 

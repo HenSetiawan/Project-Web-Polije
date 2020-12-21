@@ -67,21 +67,17 @@
 
         public function createOrUpdateMitra()
         {
-            if(!isset($_SESSION['loginAdmin'])){
-                header("Location:".BASEURL."/dashboard/login");
-            }
             $mitraModelClass = $this->model("dashboard","MitraModel");
             if(isset($_POST['submitMitra'])){
                 $mitraModelClass->insertDataMitra($_POST);
-                $baseUrl=BASEURL;
-                header("Location:$baseUrl/dashboard/mitra");
+                header("Location:".BASEURL."/dashboard/mitra");
+            }elseif(isset($_POST['updateMitra'])){
+                $mitraModelClass->updateMitra($_POST);
+                header("Location:".BASEURL."/dashboard/mitra");
+            }else{
+                header("Location:".BASEURL."/dashboard/mitra");
             }
 
-            if(isset($_POST['updateMitra'])){
-                $mitraModelClass->updateMitra($_POST);
-                $baseUrl=BASEURL;
-                header("Location:$baseUrl/dashboard/mitra");
-            }
         }
 
 

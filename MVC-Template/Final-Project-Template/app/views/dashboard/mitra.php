@@ -66,7 +66,7 @@
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
             <form action="<?=BASEURL?>/dashboard/createOrUpdateMitra" method="post">
               <div class="modal-content">
                 <div class="modal-header">
@@ -77,36 +77,35 @@
                 </div>
                 <div class="modal-body">
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                   <div class="form-group">
                     <label for="name">Nama</label>
-                    <input type="text" name="name" id="name" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <input type="text" name="alamat" id="alamat" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    	<label for="noKtp">No KTP</label>
-                      <input type="text" name="noKtp" id="noKtp" class="form-control">
-                </div>
-                
+                    <input type="text" name="name" id="name" class="form-control shadow-sm" placeholder="nama">
                   </div>
 
-                <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="alamat">Alamat</label>
+                      <input type="text" name="alamat" id="alamat" class="form-control shadow-sm" placeholder="alamat">
+                  </div>
+
+                  <div class="form-group">
+                        <label for="noKtp">No KTP</label>
+                        <input type="text" name="noKtp" id="noKtp" class="form-control shadow-sm" placeholder="no ktp">
+                  </div>
+
                   <div class="form-group">
                       <label for="email">Email</label>
-                      <input type="email" name="email" id="email" class="form-control">
+                      <input type="email" name="email" id="email" class="form-control shadow-sm" placeholder="example@example.com">
                   </div>
 
                   <div class="form-group">
                     	<label for="noHandphone">No Handphone</label>
-                      <input type="text" name="noHandphone" id="noHandphone" class="form-control">
-                </div>
-
+                      <input type="text" name="noHandphone" id="noHandphone" class="form-control shadow-sm" placeholder="+62">
                   </div>
+                
+                  </div>
+
+
                 </div>
 
                 </div>
