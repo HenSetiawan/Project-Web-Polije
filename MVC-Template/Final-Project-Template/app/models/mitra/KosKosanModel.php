@@ -53,9 +53,9 @@
         }
 
 
-        public function getDataKos()
+        public function getDataKos($idMitra)
         {
-            $this->db->query("SELECT * FROM kos_kosan");
+            $this->db->query("SELECT * FROM kos_kosan WHERE id_pemilik='$idMitra'");
             return  $this->db->getAllData();
         }
     }

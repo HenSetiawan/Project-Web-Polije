@@ -5,11 +5,14 @@
         public function index()
         {
             $LoginModel=$this->model('dashboard','LoginModel');
+            $KoskosanModel=$this->model('dashboard','KosKosanModel');
 
             if(!isset($_SESSION['loginAdmin'])){
                 header("Location:".BASEURL."/dashboard/login");
             }
             $data['dataAdmin']=$LoginModel->getDataAdmin();
+            $data['dataKos']=$KoskosanModel->getAllDataKos();
+
             $this->views('template-dashboard/header',$data);
             $this->views('dashboard/index',$data);
             $this->views('template-dashboard/footer');

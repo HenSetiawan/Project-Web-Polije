@@ -58,7 +58,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="<?=BASEURL;?>/dashboard/mitra">
+        <a class="nav-link" href="<?=BASEURL;?>/dashboard/index">
         <i class="fas fa-home"></i>
           <span>KosKosan</span>
         </a>

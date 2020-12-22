@@ -14,8 +14,8 @@ class Mitra extends Controller{
                 header("Location:". BASEURL ."/mitra/login");
             }
 
-			$data['dataMitra'] = $LoginModel->getDataUserActive();
-			$data['dataKos']=$kosKosanModel->getDataKos();
+			$data['dataMitra'] = $LoginModel->getDataMitra();
+			$data['dataKos']=$kosKosanModel->getDataKos($data['dataMitra']['id_pemilik']);
 
             $this->views('template-mitra/header',$data);
             $this->views('mitra/index',$data);

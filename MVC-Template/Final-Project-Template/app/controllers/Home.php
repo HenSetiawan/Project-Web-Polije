@@ -4,13 +4,15 @@ class Home extends Controller {
     
     public function index(){
         $modelLogin = $this->model("login","LoginModel");
+        $KoskosanModel=$this->model('home','KosKosanModel');
         $modelLogin->checkRememberMe();
 
         $data['title']="Cari Kos Mudah Dan Terpercaya";
         $data['user']=$modelLogin->getDataUserActive();
+        $data['dataKos']=$KoskosanModel->getAllDataKos();
         
         $this->views('template/header',$data);
-        $this->views('home/index');
+        $this->views('home/index',$data);
         $this->views('template/footer');
     }
 

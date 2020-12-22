@@ -68,7 +68,7 @@ class LoginModel {
 
 
     // get data user active
-	public function getDataUserActive()
+	public function getDataMitra()
     {
       if(isset($_SESSION['loginMitra'])){
         $userId = $_SESSION['loginMitra'];
