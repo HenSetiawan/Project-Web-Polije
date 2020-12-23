@@ -51,9 +51,11 @@
             </div>
         </div>
         <?php if(isset($_SESSION['isUserNotFound'])){ ?>
-            <div class='alert alert-danger alert-dismissible fade show ' role='alert'>
-                <span> 
-                    <strong>Akun Anda Tidak Ditemukan</strong>
+            <div class='alert alert-danger alert-dismissible fade show col-md-12' role='alert'>
+                <span>
+                     <center> 
+                         <strong class="ml-4">Akun Anda Tidak Ditemukan</strong>
+                     </center>
                 </span>  
             </div>
        <?php } ?>
