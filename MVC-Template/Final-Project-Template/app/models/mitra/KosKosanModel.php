@@ -61,6 +61,14 @@
 
         public function deleteDataById($id)
         {
+            $this->db->query("SELECT * FROM kos_kosan WHERE id_kos='$id'");
+            $dataKos=$this->db->getData();
+        
+            $images=[$dataKos['gambar_1'],$dataKos['gambar_2'],$dataKos['gambar_3']];
+            var_dump($dataKos);
+            foreach($images as $image){
+                unlink('./public/image/'.$image);
+            }
             $this->db->query("DELETE FROM kos_kosan WHERE id_kos='$id'");
         }
     }

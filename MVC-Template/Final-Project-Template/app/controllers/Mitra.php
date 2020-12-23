@@ -23,6 +23,7 @@ class Mitra extends Controller{
 			
 			if(isset($_POST['insert-kos'])){
 				$kosKosanModel->insertDataKos($_POST,$_FILES,$data['dataMitra']);
+				header("Refresh:1");
 			}
 		}
 		
