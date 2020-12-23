@@ -31,7 +31,7 @@ class MitraModel
 
 
         $insertQuery = "INSERT INTO pemilik_kos
-                        VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone','null)";
+                        VALUES ('$noKtp','$name','$alamat','$email','$password','$noHandphone',null)";
 
  
             $this->db->query($insertQuery);
