@@ -33,7 +33,9 @@
     <?php if(isset($_SESSION['isMitraNotFound'])){ ?>
         <div class='alert alert-danger alert-dismissible fade show mt-5 col-md-6' role='alert'>
                 <span> 
-                    <strong>Akun Anda Tidak Ditemukan</strong>
+                    <center>
+                        <strong class="ml-5">Akun Anda Tidak Ditemukan</strong>
+                    </center>
                 </span>  
             </div>
     <?php  } ?>

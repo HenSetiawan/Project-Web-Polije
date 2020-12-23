@@ -24,7 +24,18 @@ class Mitra extends Controller{
 			if(isset($_POST['insert-kos'])){
 				$kosKosanModel->insertDataKos($_POST,$_FILES,$data['dataMitra']);
 			}
-        }
+		}
+		
+
+		public function deleteDataKosById($id)
+		{
+			if(!isset($_SESSION['loginMitra'])){
+                header("Location:". BASEURL ."/mitra/login");
+            }
+			$kosKosanModel=$this->model('mitra','KosKosanModel');
+			$kosKosanModel->deleteDataById($id);
+			header("Location:".BASEURL."/mitra");
+		}
 
         // view of login
         public function login()

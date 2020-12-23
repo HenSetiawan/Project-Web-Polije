@@ -58,4 +58,9 @@
             $this->db->query("SELECT * FROM kos_kosan WHERE id_pemilik='$idMitra'");
             return  $this->db->getAllData();
         }
+
+        public function deleteDataById($id)
+        {
+            $this->db->query("DELETE FROM kos_kosan WHERE id_kos='$id'");
+        }
     }

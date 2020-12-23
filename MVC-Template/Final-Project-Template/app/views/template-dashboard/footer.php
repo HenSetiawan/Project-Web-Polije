@@ -18,7 +18,7 @@
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-  <script src="<?=BASEURL;?>/public/js/index.js"></script>
+  <script src="<?=BASEURL;?>/public/javascript/dashboard.js"></script>
 </body>
 
 </html>

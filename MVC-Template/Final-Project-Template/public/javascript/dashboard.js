@@ -43,6 +43,7 @@ btnUpdateItems.forEach(btnUpdate=>{
 
 //tambah mitra
 const btnAdd=document.getElementById('btn-tambah-mitra');
+if(btnAdd!=null){
 btnAdd.addEventListener('click',()=>{
 
   document.getElementById('name').value='';
@@ -55,3 +56,5 @@ btnAdd.addEventListener('click',()=>{
   document.getElementById('btn-submit-mitra').setAttribute('name','submitMitra')
 
 })
+}
+

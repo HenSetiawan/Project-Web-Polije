@@ -143,7 +143,11 @@
                                         <td><img src="<?=BASEURL; ?>/public/image/<?=$dataKos['gambar_3'] ?>" width="50px" height="50px"></td>
 
                                         <td>
-                                            <button class="btn btn-sm btn-danger btn-block">Hapus</button>
+                                            <button class="btn btn-sm btn-danger btn-block btn-delete-kos"
+                                             data-url="<?=BASEURL; ?>/mitra/deletedatakosbyid"
+                                             data-id="<?=$dataKos['id_kos'] ?>"
+                                             
+                                             >Hapus</button>
 
                                             <button  class="btn btn-sm btn-warning btn-block">Ubah</button>
                                         </td>
@@ -211,7 +215,7 @@
             </div>
             <div class="col-md-6">
               <label for="sewa-kos">Harga Sewa</label>
-              <input type="text" name="sewa-kos" id="nama-kos" class="form-control" required>
+              <input type="text" name="sewa-kos" id="sewa-kos" class="form-control" required>
             </div>
 
               <div class="col-md-6">

@@ -20,9 +20,11 @@
 
 
 <div class="row mt-5">
-  <?php foreach($data['dataKos'] as $dataKos){ ?>
+  <?php
+  if($data['dataKos']!=null){
+   foreach($data['dataKos'] as $dataKos){ ?>
     <div class="col-md-3 mb-3">
-    <a href="<?=BASEURL?>/home/detail/1" class="link-secondary text-decoration-none">
+    <a href="<?=BASEURL?>/home/detail/<?= $dataKos['id_kos']; ?>" class="link-secondary text-decoration-none">
           <div class="card" >
           <img src="<?=BASEURL; ?>/public/image/<?=$dataKos['gambar_1'] ?>" class="card-img-top" alt="...">
           <div class="card-body">
@@ -34,7 +36,7 @@
           </div>
         </a>
   </div>
-<?php  } ?>
+<?php  }} ?>
 
 </div>
 
