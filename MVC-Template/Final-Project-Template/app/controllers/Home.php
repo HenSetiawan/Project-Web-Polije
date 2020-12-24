@@ -30,10 +30,13 @@ class Home extends Controller {
         $KoskosanModel=$this->model('home','KosKosanModel');
         $modelLogin->checkRememberMe();
 
+        $data['title']="Cari Kos Mudah Dan Terpercaya";
         $data['user']=$modelLogin->getDataUserActive();
         $data['detailKos']=$KoskosanModel->getDetailKos($id);
-        $data['title']="Cari Kos Mudah Dan Terpercaya";
 
+        //ubah 08 menjadi 62
+        $data['hp'] = substr_replace($data['detailKos']['no_hp'], "62", 0,1);
+        
         if ($data['detailKos'] == 0) {
             header("Location: " . BASEURL . "/home");
         }

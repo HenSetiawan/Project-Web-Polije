@@ -24,7 +24,8 @@
                 return 0;   
             }
 
-            $this->db->query("SELECT * FROM kos_kosan WHERE id_kos = '$data'");
+            $this->db->query("SELECT a.id_kos, a.id_pemilik, a.nama_kos, a.alamat, a.jenis, a.harga, a.gambar_1, a.gambar_2, a.gambar_3, a.deskripsi, b.no_hp FROM kos_kosan a INNER JOIN pemilik_kos b ON a.id_pemilik = b.id_pemilik WHERE a.id_kos = '$data'");
+            
             return $this->db->getData();
         }
     }
