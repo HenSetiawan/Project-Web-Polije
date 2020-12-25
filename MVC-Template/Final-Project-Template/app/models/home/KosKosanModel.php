@@ -28,4 +28,34 @@
             
             return $this->db->getData();
         }
+
+
+        public function getRating($id){
+            $this->db->query("SELECT FORMAT(AVG(rate), 0) AS rate, SUM(user_rate) AS user_rate FROM rate WHERE id_kos = '$id'");
+            return $this->db->getData();
+        }
+
+        public function insertRating($data)
+        {
+            $id_user = $data["user"];
+            $id_kos = $data["kos"];
+            $id_pemilik = $data['pemilik'];
+            $radio = $data["radio"];
+
+            $rate = $this->db->query("SELECT * FROM rate WHERE id_user = '$id_user' AND id_kos = '$id_kos'");
+
+            if (mysqli_num_rows($this->db->result) > 0) {
+            echo
+                "<script>
+                  swal('Anda sudah memberikan nilai');
+                </script>";
+            return false;
+            }
+
+            $this->db->query("INSERT INTO rate VALUES('$id_pemilik', '$id_user', '$id_kos', 0, 0)");
+
+            $this->db->query("UPDATE rate SET rate = rate +$radio, user_rate = user_rate +1 WHERE id_user = '$id_user' AND id_kos = '$id_kos'");
+
+            return 1;
+        }
     }
