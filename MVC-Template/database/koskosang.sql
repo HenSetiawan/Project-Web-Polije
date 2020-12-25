@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2020 at 07:54 AM
+-- Generation Time: Dec 25, 2020 at 03:50 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -81,6 +81,7 @@ CREATE TABLE `kos_kosan` (
 
 INSERT INTO `kos_kosan` (`id_kos`, `id_pemilik`, `nama_kos`, `alamat`, `jenis`, `harga`, `gambar_1`, `gambar_2`, `gambar_3`, `deskripsi`) VALUES
 ('301608877500', 'E41191280', 'Kos Bu Ndien', 'Tangerang', 'campur', 250000, '5329213.jpg', '9899542.jpg', '4065311.jpg', 'Harga Normal: Rp3.525.000/bulan. Booking sekarang, kuota terbatas! •2 • Dekat dengan Universitas Sanata Dharma kampus 1 Mrican (5 menit), Universitas Atmajaya kampus Mrican ‘’Fakultas Hukum’’ (5 menit), UIN Sunan Kalijaga (5 menit), Universitas Gadjah Mada Yogyakarta (10 menit), Universitas Negeri Yogyakarta (10 menit), Universitas Mercubuana Yogyakarta kampus 2 (12 menit), STIKES Panti Rapih Condong Catur (10 menit), Stikes Panti Rapih Condong Catur (10 menit), PKL Mrican (10 menit), Ambarukmo Plaza (7 menit), Lippo Mall (7 menit), Empire XXI (10 menit), Galeria Mall (12 menit), RS Siloam Yogyakarta (6 menit), RS Bethesda (12 menit) dekat dengan tempat makan, tempat nongkrong, Ibadah, SPBU, ATM dan mudah ditemukan oleh ojek online • Yuk BOOKING LANGSUNG sekarang, sebelum kehabisan.'),
+('501608895210', 'E41191280', 'Kos Bu Selly', 'Tangerang', 'putra', 250000, '5077382.jpg', '4888061.jpg', '690573.jpg', 'sadd\r\n'),
 ('771608879022', 'E41191280', 'Kos Bu Selly', 'Tangerang', 'putri', 400000, '3963012.jpg', '8944191.jpg', '9517693.jpg', 'Harga Normal: Rp3.525.000/bulan. Booking sekarang, kuota terbatas! •2 • Dekat dengan Universitas Sanata Dharma kampus 1 Mrican (5 menit),  Universitas Atmajaya kampus Mrican ‘’Fakultas Hukum’’ (5 menit), UIN Sunan Kalijaga (5 menit), Universitas Gadjah Mada Yogyakarta (10 menit), Universitas Negeri Yogyakarta (10 menit), Universitas Mercubuana Yogyakarta kampus 2 (12 menit), STIKES Panti Rapih Condong Catur (10 menit), Stikes Panti Rapih Condong Catur (10 menit), PKL Mrican (10 menit), Ambarukmo Plaza (7 menit), Lippo Mall (7 menit), Empire XXI (10 menit), Galeria Mall (12 menit), RS Siloam Yogyakarta (6 menit), RS Bethesda (12 menit) dekat dengan tempat makan, tempat nongkrong, Ibadah, SPBU, ATM dan mudah ditemukan oleh ojek online • Yuk BOOKING LANGSUNG sekarang, sebelum kehabisan');
 
 -- --------------------------------------------------------
@@ -107,6 +108,27 @@ INSERT INTO `pemilik_kos` (`id_pemilik`, `nama`, `alamat`, `email`, `password`, 
 ('589385839634', 'Ardan Venora', 'Bondowoso', 'Hibonachi@gmail.com', '$2y$10$W7vjnrDQGR3D0IlUcTjbYuM0nPEJZHD50s/B4AKScgPtxR2xQWp4q', '08976576768', 'e72566578c93c3a4e18bb44bebc941ba'),
 ('E41191280', 'Hendy setiawan', 'Ngawi', 'hendystyawan74@gmail.com', '$2y$10$a/L0C5kxqyhXdI.v3F1NJeVx6fZ1BeRfHEUj18bB3gDM04xc9Am7e', '083844984836', '7d9fb772bade721dff4e8457dda17940'),
 ('E6679845', 'Dwi Rifky N', 'Bekasi', 'DwiRifky@gmail.com', '$2y$10$sCbmmu0ZOmXOZuMNAopJWe.LBLjixqYt0HqYMCOZRXyjmGGnQQKLe', '08976576768', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rate`
+--
+
+CREATE TABLE `rate` (
+  `id_pemilik` varchar(255) NOT NULL,
+  `id_user` varchar(255) NOT NULL,
+  `id_kos` varchar(255) NOT NULL,
+  `rate` int(11) NOT NULL,
+  `user_rate` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rate`
+--
+
+INSERT INTO `rate` (`id_pemilik`, `id_user`, `id_kos`, `rate`, `user_rate`) VALUES
+('E41191280', '5fe2d1494cbf1', '301608877500', 4, 1);
 
 -- --------------------------------------------------------
 

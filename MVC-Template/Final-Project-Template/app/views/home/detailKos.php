@@ -52,7 +52,7 @@
       <div class="modal-body">
           <input type="hidden" name="kos" value="<?= $data['detailKos']['id_kos']; ?>">
           <input type="hidden" name="user" value="<?= $data['user']['id_user']; ?>">
-          <input type="hidden" name="pemilik" value="<?= $data['user']['id_pemilik']; ?>">
+          <input type="hidden" name="pemilik" value="<?= $data['detailKos']['id_pemilik']; ?>">
           <i class="fa fa-thumbs-o-down mr-1" style="font-size:24px"></i>
           <input class="form-check-input" type="radio" name="radio" value="1">
           <input class="form-check-input" type="radio" name="radio" value="2">
