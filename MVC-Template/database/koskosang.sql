@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Waktu pembuatan: 21 Des 2020 pada 15.27
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.4.10
+-- Host: 127.0.0.1
+-- Generation Time: Dec 25, 2020 at 07:54 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +36,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `nama`, `email`, `password`) VALUES
@@ -44,7 +45,7 @@ INSERT INTO `admin` (`id_admin`, `nama`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blog`
+-- Table structure for table `blog`
 --
 
 CREATE TABLE `blog` (
@@ -58,7 +59,7 @@ CREATE TABLE `blog` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kos_kosan`
+-- Table structure for table `kos_kosan`
 --
 
 CREATE TABLE `kos_kosan` (
@@ -71,20 +72,21 @@ CREATE TABLE `kos_kosan` (
   `gambar_1` varchar(255) DEFAULT NULL,
   `gambar_2` varchar(255) DEFAULT NULL,
   `gambar_3` varchar(255) DEFAULT NULL,
-  `deskripsi` varchar(255) DEFAULT NULL
+  `deskripsi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kos_kosan`
+-- Dumping data for table `kos_kosan`
 --
 
 INSERT INTO `kos_kosan` (`id_kos`, `id_pemilik`, `nama_kos`, `alamat`, `jenis`, `harga`, `gambar_1`, `gambar_2`, `gambar_3`, `deskripsi`) VALUES
-('431608560109', 'E41191280', 'Melati', 'Jember', 'putra', 250000, '73871bing.png', '581006indihome.png', '147849inner-join.png', 'test data');
+('301608877500', 'E41191280', 'Kos Bu Ndien', 'Tangerang', 'campur', 250000, '5329213.jpg', '9899542.jpg', '4065311.jpg', 'Harga Normal: Rp3.525.000/bulan. Booking sekarang, kuota terbatas! •2 • Dekat dengan Universitas Sanata Dharma kampus 1 Mrican (5 menit), Universitas Atmajaya kampus Mrican ‘’Fakultas Hukum’’ (5 menit), UIN Sunan Kalijaga (5 menit), Universitas Gadjah Mada Yogyakarta (10 menit), Universitas Negeri Yogyakarta (10 menit), Universitas Mercubuana Yogyakarta kampus 2 (12 menit), STIKES Panti Rapih Condong Catur (10 menit), Stikes Panti Rapih Condong Catur (10 menit), PKL Mrican (10 menit), Ambarukmo Plaza (7 menit), Lippo Mall (7 menit), Empire XXI (10 menit), Galeria Mall (12 menit), RS Siloam Yogyakarta (6 menit), RS Bethesda (12 menit) dekat dengan tempat makan, tempat nongkrong, Ibadah, SPBU, ATM dan mudah ditemukan oleh ojek online • Yuk BOOKING LANGSUNG sekarang, sebelum kehabisan.'),
+('771608879022', 'E41191280', 'Kos Bu Selly', 'Tangerang', 'putri', 400000, '3963012.jpg', '8944191.jpg', '9517693.jpg', 'Harga Normal: Rp3.525.000/bulan. Booking sekarang, kuota terbatas! •2 • Dekat dengan Universitas Sanata Dharma kampus 1 Mrican (5 menit),  Universitas Atmajaya kampus Mrican ‘’Fakultas Hukum’’ (5 menit), UIN Sunan Kalijaga (5 menit), Universitas Gadjah Mada Yogyakarta (10 menit), Universitas Negeri Yogyakarta (10 menit), Universitas Mercubuana Yogyakarta kampus 2 (12 menit), STIKES Panti Rapih Condong Catur (10 menit), Stikes Panti Rapih Condong Catur (10 menit), PKL Mrican (10 menit), Ambarukmo Plaza (7 menit), Lippo Mall (7 menit), Empire XXI (10 menit), Galeria Mall (12 menit), RS Siloam Yogyakarta (6 menit), RS Bethesda (12 menit) dekat dengan tempat makan, tempat nongkrong, Ibadah, SPBU, ATM dan mudah ditemukan oleh ojek online • Yuk BOOKING LANGSUNG sekarang, sebelum kehabisan');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pemilik_kos`
+-- Table structure for table `pemilik_kos`
 --
 
 CREATE TABLE `pemilik_kos` (
@@ -98,7 +100,7 @@ CREATE TABLE `pemilik_kos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pemilik_kos`
+-- Dumping data for table `pemilik_kos`
 --
 
 INSERT INTO `pemilik_kos` (`id_pemilik`, `nama`, `alamat`, `email`, `password`, `no_hp`, `vkey`) VALUES
@@ -109,7 +111,7 @@ INSERT INTO `pemilik_kos` (`id_pemilik`, `nama`, `alamat`, `email`, `password`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -123,42 +125,43 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `email`, `password`, `no_handphone`, `vkey`, `token`) VALUES
-('5fd1f264e788a', 'Dwi Rifki Novianto', 'dwirifkinovianto10@gmail.com', '$2y$10$Sp7ZIsrZMiHg6i1DRIrMFerKR2YuhKRkuxqFQyrHfAXof3yqdzGBy', '083872523688', 'd30387c3809e82e526651313b1184781', 0),
-('5fd5d0da6946e', 'Hendy setiawan', 'hendystyawan74@gmail.com', '$2y$10$195.CmRd29us25uRrpWoJ.q89q9OBjTcSPhvD5Yj7IaXQf5f7dZHS', '083848939627', 'aec3243f8dad30889c81944eae34b67f', 1);
+('5fd5d0da6946e', 'Hendy setiawan', 'hendystyawan74@gmail.com', '$2y$10$195.CmRd29us25uRrpWoJ.q89q9OBjTcSPhvD5Yj7IaXQf5f7dZHS', '083848939627', 'aec3243f8dad30889c81944eae34b67f', 1),
+('5fe2d1494cbf1', 'Dwi Rifki Novianto', 'remanagedata@gmail.com', '$2y$10$z5IXTxU0oynZyb0cToOti.daHtOC71Lk0TxinVzJdrQQaMNzQQ5by', '083872523688', '804c329250e57bc992db6579846886d2', 1),
+('5fe2d1a30c8fc', 'Dwi Rifki Novianto', 'dwirifkinovianto10@gmail.com', '$2y$10$n.VyyfaVsGSMOPzLtYMbZO14bhO/eU/9xcOe.zl.w/.p8jKAz0YE2', '083872523688', '4dc330899776601d1afa6204d8f9b215', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `kos_kosan`
+-- Indexes for table `kos_kosan`
 --
 ALTER TABLE `kos_kosan`
   ADD PRIMARY KEY (`id_kos`),
   ADD KEY `kos_kosan_fk0` (`id_pemilik`);
 
 --
--- Indeks untuk tabel `pemilik_kos`
+-- Indexes for table `pemilik_kos`
 --
 ALTER TABLE `pemilik_kos`
   ADD PRIMARY KEY (`id_pemilik`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `kos_kosan`
+-- Constraints for table `kos_kosan`
 --
 ALTER TABLE `kos_kosan`
   ADD CONSTRAINT `kos_kosan_fk0` FOREIGN KEY (`id_pemilik`) REFERENCES `pemilik_kos` (`id_pemilik`);

@@ -4,7 +4,7 @@
 </div>
 <!-- end container -->
 
-<footer class="row" style="width: 110%;">
+<footer class="row" style="width: 100.9%;">
     <section class="col-md-4 mt-4">
         <h5>Hubungi Kami</h5>
         <div class="media-sosial">
@@ -29,7 +29,6 @@
 
 
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
-
 
 </body>
 </html>

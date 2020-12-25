@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="<?= BASEURL; ?>/public/sb-admin/css/sb-admin-2.min.css">
+    <link rel="icon" href="<?=BASEURL;?>/public/image/owner.png">
 
 </head>
 

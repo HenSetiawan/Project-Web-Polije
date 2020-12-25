@@ -3,13 +3,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="<?=BASEURL; ?>/public/image/<?= $data['detailKos']['gambar_1']; ?>" class="d-block w-100" height="320" alt="...">
+            <img src="<?=BASEURL; ?>/public/photos/<?= $data['detailKos']['gambar_1']; ?>" class="d-block w-100" height="320" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="<?=BASEURL; ?>/public/image/<?= $data['detailKos']['gambar_2']; ?>" class="d-block w-100" height="320" alt="...">
+            <img src="<?=BASEURL; ?>/public/photos/<?= $data['detailKos']['gambar_2']; ?>" class="d-block w-100" height="320" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="<?=BASEURL; ?>/public/image/<?= $data['detailKos']['gambar_3']; ?>" class="d-block w-100" height="320" alt="...">
+            <img src="<?=BASEURL; ?>/public/photos/<?= $data['detailKos']['gambar_3']; ?>" class="d-block w-100" height="320" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

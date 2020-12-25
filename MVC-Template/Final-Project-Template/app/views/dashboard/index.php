@@ -110,9 +110,9 @@
                                         <td><?= $dataKos['jenis'] ; ?></td>
                                         <td><?= $dataKos['harga'] ; ?></td>
                                         <td><?= $dataKos['deskripsi'] ; ?></td>
-                                        <td><img src="<?=BASEURL; ?>/public/image/<?=$dataKos['gambar_1'] ?>" width="50px" height="50px"></td>
-                                        <td><img src="<?=BASEURL; ?>/public/image/<?=$dataKos['gambar_2'] ?>" width="50px" height="50px"></td>
-                                        <td><img src="<?=BASEURL; ?>/public/image/<?=$dataKos['gambar_3'] ?>" width="50px" height="50px"></td>
+                                        <td><img src="<?=BASEURL; ?>/public/photos/<?=$dataKos['gambar_1'] ?>" width="50px" height="50px"></td>
+                                        <td><img src="<?=BASEURL; ?>/public/photos/<?=$dataKos['gambar_2'] ?>" width="50px" height="50px"></td>
+                                        <td><img src="<?=BASEURL; ?>/public/photos/<?=$dataKos['gambar_3'] ?>" width="50px" height="50px"></td>
                                     </tr>
                                  <?php }} ?>
                                 </tbody>

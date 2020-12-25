@@ -18,6 +18,7 @@
   <!-- Custom styles for this template-->
   <link rel="stylesheet" href="<?= BASEURL; ?>/public/sb-admin/css/sb-admin-2.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css">
+  <link rel="icon" href="<?=BASEURL;?>/public/image/admin.png">
 
 </head>
 

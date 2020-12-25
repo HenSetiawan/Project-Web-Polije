@@ -11,7 +11,7 @@
 
         public function insertDataKos($data,$files,$dataMitra)
         {
-            $imagePath='./public/image/';
+            $imagePath='./public/photos/';
             $tmpFile=null;
             $nameFile=null;
             $extensionFile=null;
@@ -67,7 +67,7 @@
             $images=[$dataKos['gambar_1'],$dataKos['gambar_2'],$dataKos['gambar_3']];
             var_dump($dataKos);
             foreach($images as $image){
-                unlink('./public/image/'.$image);
+                unlink('./public/photos/'.$image);
             }
             $this->db->query("DELETE FROM kos_kosan WHERE id_kos='$id'");
         }

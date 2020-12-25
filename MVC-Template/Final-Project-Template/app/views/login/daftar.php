@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <div class="row mt-1 mb-4 button-login">
+        <div class="row mt-5 mb-4 button-login">
             <div class="col">
                 <button class="btn btn-success btn-sm rounded-pill" type="submit" name="submit">Daftar</button>
             </div>
