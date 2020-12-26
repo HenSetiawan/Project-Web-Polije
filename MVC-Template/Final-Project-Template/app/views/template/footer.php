@@ -3,8 +3,8 @@
 
 </div>
 <!-- end container -->
-
-<footer class="row" style="width: 102.3%;">
+<div class="container-fluid" style="width: 100%;">
+<footer class="row">
     <section class="col-md-4 mt-4">
         <h5>Hubungi Kami</h5>
         <div class="media-sosial">
@@ -26,7 +26,7 @@
         <a href="" class="text-secondary">Syarat dan ketentuan</a>
     </section>
 </footer>
-
+</div>
 
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
 

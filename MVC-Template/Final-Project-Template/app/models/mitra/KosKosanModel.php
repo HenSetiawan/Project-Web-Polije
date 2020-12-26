@@ -69,6 +69,10 @@
             foreach($images as $image){
                 unlink('./public/photos/'.$image);
             }
-            $this->db->query("DELETE FROM kos_kosan WHERE id_kos='$id'");
+            $this->db->query("DELETE kos_kosan, rate FROM kos_kosan INNER JOIN rate ON kos_kosan.id_kos = rate.id_kos WHERE kos_kosan.id_kos = '$id'");
+
+            if (mysqli_num_rows($this->db->result) == 0) {
+                $this->db->query("DELETE FROM kos_kosan WHERE id_kos = '$id'");    
+            }
         }
     }

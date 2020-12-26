@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2020 at 09:28 AM
+-- Generation Time: Dec 26, 2020 at 11:06 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -75,14 +75,6 @@ CREATE TABLE `kos_kosan` (
   `deskripsi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `kos_kosan`
---
-
-INSERT INTO `kos_kosan` (`id_kos`, `id_pemilik`, `nama_kos`, `alamat`, `jenis`, `harga`, `gambar_1`, `gambar_2`, `gambar_3`, `deskripsi`) VALUES
-('651608970807', 'E41191280', 'Melati', 'Tangerang', 'campur', 300000, '8431131.jpg', '7382742.jpg', '7986073.jpg', 'Seiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.'),
-('751608970846', 'E41191280', 'Kos Putra', 'Tangerang', 'putra', 250000, '1770412.jpg', '6626431.jpg', '7501263.jpg', 'Seiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.');
-
 -- --------------------------------------------------------
 
 --
@@ -126,8 +118,7 @@ CREATE TABLE `rate` (
 --
 
 INSERT INTO `rate` (`id_pemilik`, `id_user`, `id_kos`, `rate`) VALUES
-('E41191280', '5fd5d0da6946e', '771608879022', 4),
-('E41191280', '5fe2d1494cbf1', '751608970846', 5);
+('E41191280', '5fd5d0da6946e', '771608879022', 4);
 
 -- --------------------------------------------------------
 

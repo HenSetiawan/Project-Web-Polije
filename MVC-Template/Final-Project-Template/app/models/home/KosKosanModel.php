@@ -31,7 +31,7 @@
 
 
         public function getRating($id){
-            $this->db->query("SELECT FORMAT(AVG(rate), 0) AS rate, SUM(rate) AS user_rate FROM rate WHERE id_kos = '$id'");
+            $this->db->query("SELECT FORMAT(AVG(rate), 0) AS rate, count(id_kos) AS user_rate FROM rate WHERE id_kos = '$id'");
             return $this->db->getData();
         }
 
