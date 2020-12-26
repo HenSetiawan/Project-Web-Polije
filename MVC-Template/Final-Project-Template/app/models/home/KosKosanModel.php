@@ -31,7 +31,7 @@
 
 
         public function getRating($id){
-            $this->db->query("SELECT FORMAT(AVG(rate), 0) AS rate, SUM(user_rate) AS user_rate FROM rate WHERE id_kos = '$id'");
+            $this->db->query("SELECT FORMAT(AVG(rate), 0) AS rate, SUM(rate) AS user_rate FROM rate WHERE id_kos = '$id'");
             return $this->db->getData();
         }
 
@@ -40,7 +40,7 @@
             $id_user = $data["user"];
             $id_kos = $data["kos"];
             $id_pemilik = $data['pemilik'];
-            $radio = $data["radio"];
+            $radio = $data["star"];
 
             $rate = $this->db->query("SELECT * FROM rate WHERE id_user = '$id_user' AND id_kos = '$id_kos'");
 
@@ -52,9 +52,7 @@
             return false;
             }
 
-            $this->db->query("INSERT INTO rate VALUES('$id_pemilik', '$id_user', '$id_kos', 0, 0)");
-
-            $this->db->query("UPDATE rate SET rate = rate +$radio, user_rate = user_rate +1 WHERE id_user = '$id_user' AND id_kos = '$id_kos'");
+            $this->db->query("INSERT INTO rate VALUES('$id_pemilik', '$id_user', '$id_kos', $radio)");
 
             return 1;
         }

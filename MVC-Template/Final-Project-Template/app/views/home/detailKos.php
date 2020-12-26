@@ -32,10 +32,10 @@
            <button type="button" class="btn btn-warning btn-sm rounded-pill badge mt-3" data-toggle="modal" data-target="#exampleModal">
           Beri Penilaian
            </button>
-           <i class="fa fa-star ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-1"><?= (string)$data["star"]["rate"]; ?></span></i>
+        <i class="fa fa-star ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-1"><?= (string)$data["star"]["rate"]; ?></span></i>
         </div>
         <p class="mt-3 small"><?= $data["detailKos"]["deskripsi"]; ?></p>
-        <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-sm rounded-pill" >Hubungi Pemilik Kos</a>
+        <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-md">Hubungi Pemilik Kos</a>
     </div>
 </div>
 
@@ -53,18 +53,20 @@
           <input type="hidden" name="kos" value="<?= $data['detailKos']['id_kos']; ?>">
           <input type="hidden" name="user" value="<?= $data['user']['id_user']; ?>">
           <input type="hidden" name="pemilik" value="<?= $data['detailKos']['id_pemilik']; ?>">
-          <i class="fa fa-thumbs-o-down mr-1" style="font-size:24px"></i>
-          <input class="form-check-input" type="radio" name="radio" value="1">
-          <input class="form-check-input" type="radio" name="radio" value="2">
-          <input class="form-check-input" type="radio" name="radio" value="3" checked>
-          <input class="form-check-input" type="radio" name="radio" value="4">
-          <input class="form-check-input" type="radio" name="radio" value="5">
-          <i class="fa fa-thumbs-o-up ml-1" style="font-size:24px"></i>
+         <div class="rating">
+          <i class="fa fa-smile-o mr-2" style="font-size:25px; margin-top:5px;" ></i>
+          <input type="radio" name="star" id="star1" value="5"><label for="star1"></label>
+          <input type="radio" name="star" id="star2" value="4"><label for="star2"></label>
+          <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
+          <input type="radio" name="star" id="star4" value="2"><label for="star4"></label>
+          <input type="radio" name="star" id="star5" value="1"><label for="star5"></label>
+          <i class="fa fa-frown ml-2" style="font-size:25px; margin-top:5px;" ></i>
+        </div>
       </div>
       </center>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" name="rate">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" class="btn btn-primary" name="rate">Simpan</button>
       </div>
     </div>
    </form>

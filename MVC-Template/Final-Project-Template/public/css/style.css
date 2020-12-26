@@ -168,14 +168,11 @@
         width: 100%;
     }
 
-.user-name{
-    display: inline !important;
+    .user-name{
+        display: inline !important;
+    }
+
 }
-
-
-    
-  }
-
 
 
 

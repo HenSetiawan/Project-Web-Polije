@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2020 at 03:50 PM
+-- Generation Time: Dec 26, 2020 at 09:28 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -80,9 +80,8 @@ CREATE TABLE `kos_kosan` (
 --
 
 INSERT INTO `kos_kosan` (`id_kos`, `id_pemilik`, `nama_kos`, `alamat`, `jenis`, `harga`, `gambar_1`, `gambar_2`, `gambar_3`, `deskripsi`) VALUES
-('301608877500', 'E41191280', 'Kos Bu Ndien', 'Tangerang', 'campur', 250000, '5329213.jpg', '9899542.jpg', '4065311.jpg', 'Harga Normal: Rp3.525.000/bulan. Booking sekarang, kuota terbatas! •2 • Dekat dengan Universitas Sanata Dharma kampus 1 Mrican (5 menit), Universitas Atmajaya kampus Mrican ‘’Fakultas Hukum’’ (5 menit), UIN Sunan Kalijaga (5 menit), Universitas Gadjah Mada Yogyakarta (10 menit), Universitas Negeri Yogyakarta (10 menit), Universitas Mercubuana Yogyakarta kampus 2 (12 menit), STIKES Panti Rapih Condong Catur (10 menit), Stikes Panti Rapih Condong Catur (10 menit), PKL Mrican (10 menit), Ambarukmo Plaza (7 menit), Lippo Mall (7 menit), Empire XXI (10 menit), Galeria Mall (12 menit), RS Siloam Yogyakarta (6 menit), RS Bethesda (12 menit) dekat dengan tempat makan, tempat nongkrong, Ibadah, SPBU, ATM dan mudah ditemukan oleh ojek online • Yuk BOOKING LANGSUNG sekarang, sebelum kehabisan.'),
-('501608895210', 'E41191280', 'Kos Bu Selly', 'Tangerang', 'putra', 250000, '5077382.jpg', '4888061.jpg', '690573.jpg', 'sadd\r\n'),
-('771608879022', 'E41191280', 'Kos Bu Selly', 'Tangerang', 'putri', 400000, '3963012.jpg', '8944191.jpg', '9517693.jpg', 'Harga Normal: Rp3.525.000/bulan. Booking sekarang, kuota terbatas! •2 • Dekat dengan Universitas Sanata Dharma kampus 1 Mrican (5 menit),  Universitas Atmajaya kampus Mrican ‘’Fakultas Hukum’’ (5 menit), UIN Sunan Kalijaga (5 menit), Universitas Gadjah Mada Yogyakarta (10 menit), Universitas Negeri Yogyakarta (10 menit), Universitas Mercubuana Yogyakarta kampus 2 (12 menit), STIKES Panti Rapih Condong Catur (10 menit), Stikes Panti Rapih Condong Catur (10 menit), PKL Mrican (10 menit), Ambarukmo Plaza (7 menit), Lippo Mall (7 menit), Empire XXI (10 menit), Galeria Mall (12 menit), RS Siloam Yogyakarta (6 menit), RS Bethesda (12 menit) dekat dengan tempat makan, tempat nongkrong, Ibadah, SPBU, ATM dan mudah ditemukan oleh ojek online • Yuk BOOKING LANGSUNG sekarang, sebelum kehabisan');
+('651608970807', 'E41191280', 'Melati', 'Tangerang', 'campur', 300000, '8431131.jpg', '7382742.jpg', '7986073.jpg', 'Seiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.'),
+('751608970846', 'E41191280', 'Kos Putra', 'Tangerang', 'putra', 250000, '1770412.jpg', '6626431.jpg', '7501263.jpg', 'Seiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.');
 
 -- --------------------------------------------------------
 
@@ -119,16 +118,16 @@ CREATE TABLE `rate` (
   `id_pemilik` varchar(255) NOT NULL,
   `id_user` varchar(255) NOT NULL,
   `id_kos` varchar(255) NOT NULL,
-  `rate` int(11) NOT NULL,
-  `user_rate` int(11) NOT NULL
+  `rate` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `rate`
 --
 
-INSERT INTO `rate` (`id_pemilik`, `id_user`, `id_kos`, `rate`, `user_rate`) VALUES
-('E41191280', '5fe2d1494cbf1', '301608877500', 4, 1);
+INSERT INTO `rate` (`id_pemilik`, `id_user`, `id_kos`, `rate`) VALUES
+('E41191280', '5fd5d0da6946e', '771608879022', 4),
+('E41191280', '5fe2d1494cbf1', '751608970846', 5);
 
 -- --------------------------------------------------------
 
@@ -153,7 +152,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `nama`, `email`, `password`, `no_handphone`, `vkey`, `token`) VALUES
 ('5fd5d0da6946e', 'Hendy setiawan', 'hendystyawan74@gmail.com', '$2y$10$195.CmRd29us25uRrpWoJ.q89q9OBjTcSPhvD5Yj7IaXQf5f7dZHS', '083848939627', 'aec3243f8dad30889c81944eae34b67f', 1),
 ('5fe2d1494cbf1', 'Dwi Rifki Novianto', 'remanagedata@gmail.com', '$2y$10$z5IXTxU0oynZyb0cToOti.daHtOC71Lk0TxinVzJdrQQaMNzQQ5by', '083872523688', '804c329250e57bc992db6579846886d2', 1),
-('5fe2d1a30c8fc', 'Dwi Rifki Novianto', 'dwirifkinovianto10@gmail.com', '$2y$10$n.VyyfaVsGSMOPzLtYMbZO14bhO/eU/9xcOe.zl.w/.p8jKAz0YE2', '083872523688', '4dc330899776601d1afa6204d8f9b215', 1);
+('5fe2d1a30c8fc', 'Dwi Rifki Novianto', 'dwirifkinovianto10@gmail.com', '$2y$10$n.VyyfaVsGSMOPzLtYMbZO14bhO/eU/9xcOe.zl.w/.p8jKAz0YE2', '083872523688', '4dc330899776601d1afa6204d8f9b215', 1),
+('5fe613b74a912', 'Dwi Rifki Novianto', 'dwirifki10@gmail.com', '$2y$10$znSStzWB4xmuoNfUBE5OrOlJL89WV6npyLjvshGqL36welgpTzona', '083872523688', 'a0b21b1ffa42d22002667babd67fe53a', 0),
+('5fe613cd9f32e', 'Dwi Rifki Novianto', 'ashenberg07@gmail.com', '$2y$10$kL.eF.3t8Fl4nNahAbNNBegHKI0YPE1nysoBf8tiuYrqtcimLilZq', '083872523688', '7a38e77652d6b11b4a1d9bc14cf74d14', 0);
 
 --
 -- Indexes for dumped tables
