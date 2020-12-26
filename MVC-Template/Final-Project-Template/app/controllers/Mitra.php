@@ -21,9 +21,24 @@ class Mitra extends Controller{
             $this->views('mitra/index',$data);
 			$this->views('template-mitra/footer');
 			
+			
+		}
+
+
+		public function insertDataKos()
+		{
+			$kosKosanModel=$this->model('mitra','KosKosanModel');
+			$LoginModel = $this->model('mitra','LoginModel');
+			$LoginModel->checkCookie();
+
+			if(!isset($_SESSION['loginMitra'])){
+                header("Location:". BASEURL ."/mitra/login");
+            }
+
+			$data['dataMitra'] = $LoginModel->getDataMitra();
 			if(isset($_POST['insert-kos'])){
 				$kosKosanModel->insertDataKos($_POST,$_FILES,$data['dataMitra']);
-				header("Refresh:1");
+				header("Location:".BASEURL."/mitra");
 			}
 		}
 		

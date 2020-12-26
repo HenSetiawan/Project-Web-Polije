@@ -36,7 +36,7 @@
         <i class="fa fa-users ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-2"><?= (string)$data["star"]["user_rate"]; ?> Reviewers</span></i>
         </div>
         <p class="mt-3 small"><?= $data["detailKos"]["deskripsi"]; ?></p>
-        <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-md">Hubungi Pemilik Kos</a>
+        <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-md mt-2">Hubungi Pemilik Kos</a>
     </div>
 </div>
 
