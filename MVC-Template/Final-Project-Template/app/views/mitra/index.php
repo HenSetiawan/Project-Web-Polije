@@ -161,6 +161,26 @@
           </div>
         </div>
 
+        <div class="row mt-4">
+            <label class="col-md-12">Fasilitas</label>
+          <div class="col-md-3">
+                <input type="checkbox" name="fas1" id="fas1" value="1">
+                <label for="fas1">Wifi</label>
+          </div>
+          <div class="col-md-3">
+                <input type="checkbox" name="fas2" id="fas2" value="1">
+                <label for="fas2">Televisi</label>
+          </div>
+          <div class="col-md-3">
+                <input type="checkbox" name="fas3" id="fas3" value="1">
+                <label for="fas3">Tempat Tidur</label>
+          </div>
+          <div class="col-md-3">
+                <input type="checkbox" name="fas4" id="fas4" value="1">
+                <label for="fas4">Kamar Mandi</label>
+          </div>
+        </div>
+
         <div class="row mt-3">
           <div class="col-md-12">
               <label for="deskripsi-kos">Deskripsi Kos</label>

@@ -45,8 +45,12 @@
             $sewaKos=$data['sewa-kos'];
             $jenisKos=$data['jenis-kos'];
             $deskripsiKos=$data['deskripsi-kos'];
+            $fas1 = $data['fas1'];
+            $fas2 = $data['fas2'];
+            $fas3 = $data['fas3'];
+            $fas4 = $data['fas4'];
 
-            $query=("INSERT INTO kos_kosan VALUES ('$idKos','$idMitra','$namaKos','$alamatKos','$jenisKos',$sewaKos,'$imagesName[0]','$imagesName[1]','$imagesName[2]','$deskripsiKos')");
+            $query=("INSERT INTO kos_kosan VALUES ('$idKos','$idMitra','$namaKos','$alamatKos','$jenisKos',$sewaKos,'$imagesName[0]','$imagesName[1]','$imagesName[2]','$deskripsiKos', '$fas1', '$fas2', '$fas3', '$fas4')");
 
             $this->db->query($query);
            

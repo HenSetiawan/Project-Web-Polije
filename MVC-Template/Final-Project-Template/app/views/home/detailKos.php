@@ -10,7 +10,7 @@
             </div>
             <div class="carousel-item">
             <img src="<?=BASEURL; ?>/public/photos/<?= $data['detailKos']['gambar_3']; ?>" class="d-block w-100" height="320" alt="...">
-            </div>
+          </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -20,11 +20,30 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-        </div>
+      </div>
+      <div class="mt-3">
+        <center>
+          <p class="btn btn btn-outline-success" style="width: 100%;">Fasilitas</p>
+        </center>
+        <center>
+          <?php if ($data['detailKos']['fas1'] == 1): ?>
+              <i class="fa fa-wifi col-md-2 mr-2 ml-1" style="color: #198754;"> Wifi</i>
+          <?php endif ?>
+          <?php if ($data['detailKos']['fas2'] == 1): ?>
+              <i class="fa fa-television col-md-2 mr-2" style="color: #198754;"> Televisi</i>
+          <?php endif ?>
+          <?php if ($data['detailKos']['fas3'] == 1): ?>
+              <i class="fa fa-bed col-md-2 mr-2" style="color: #198754;"> Kasur</i>
+          <?php endif ?>
+          <?php if ($data['detailKos']['fas4'] == 1): ?>
+              <i class="fa fa-bath col-md-3 mr-2" style="color: #198754;"> Kamar Mandi</i>
+          <?php endif ?>
+        </center>
+      </div>
     </div>
 
-    <div class="col-md-6 mt-3 mb-5">
-        <h3 class="font-weight-bold"><?= $data["detailKos"]["nama_kos"]; ?></h2>
+    <div class="col-md-6 mt-2 mb-5">
+        <h3><strong><?= $data["detailKos"]["nama_kos"]; ?></strong></h2>
         <span  class="border p-1 rounded-pill font-weight-bold span-jenis-kos"><?= $data["detailKos"]["jenis"]; ?></span>
         <i class="fas fa-map-marker-alt location-kos ml-2 mt-3"><span class="pl-1"><?= $data["detailKos"]["alamat"]; ?></span></i>
         <span class="price-kos ml-2 mr-2 mt-3"><?= "Rp. " . $data["detailKos"]["harga"] . " /bln"; ?></span>
@@ -32,11 +51,16 @@
            <button type="button" class="btn btn-warning btn-sm rounded-pill badge mt-3" data-toggle="modal" data-target="#exampleModal">
           Beri Penilaian
            </button>
-        <i class="fa fa-star ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-1"><?= (string)$data["star"]["rate"]; ?> Stars</span></i>
-        <i class="fa fa-users ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-2"><?= (string)$data["star"]["user_rate"]; ?> Reviewers</span></i>
+          <i class="fa fa-star ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-1"><?= (string)$data["star"]["rate"]; ?> Stars</span></i>
+          <i class="fa fa-users ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-2"><?= (string)$data["star"]["user_rate"]; ?> Reviewers</span></i>
         </div>
-        <p class="mt-3 small"><?= $data["detailKos"]["deskripsi"]; ?></p>
-        <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-md mt-2">Hubungi Pemilik Kos</a>
+          <p class="mt-3 small"><?= $data["detailKos"]["deskripsi"]; ?></p>
+        <div class="mt-2">
+          <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-md" style="width: 100%;">Hubungi Pemilik Kos</a>
+        </div>
+        <div class="mt-3">
+          <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-danger btn-md" style="width: 100%;">Booking Kos Sekarang</a>
+        </div>
     </div>
 </div>
 

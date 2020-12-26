@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2020 at 11:06 AM
+-- Generation Time: Dec 26, 2020 at 04:53 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -72,8 +72,21 @@ CREATE TABLE `kos_kosan` (
   `gambar_1` varchar(255) DEFAULT NULL,
   `gambar_2` varchar(255) DEFAULT NULL,
   `gambar_3` varchar(255) DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL
+  `deskripsi` text DEFAULT NULL,
+  `fas1` varchar(11) NOT NULL,
+  `fas2` varchar(11) NOT NULL,
+  `fas3` varchar(11) NOT NULL,
+  `fas4` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kos_kosan`
+--
+
+INSERT INTO `kos_kosan` (`id_kos`, `id_pemilik`, `nama_kos`, `alamat`, `jenis`, `harga`, `gambar_1`, `gambar_2`, `gambar_3`, `deskripsi`, `fas1`, `fas2`, `fas3`, `fas4`) VALUES
+('41608995746', 'E41191280', 'Kos Putra', 'Tangerang', 'putra', 250000, '1722723.jpg', '7028132.jpg', '137071.jpg', '\r\nSeiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.', '', '', '1', '1'),
+('421608995581', 'E41191280', 'Melati dan Mawar', 'Tangerang', 'putra', 250000, '3153251.jpg', '8998252.jpg', '8939013.jpg', '\r\nSeiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.', '1', '1', '', ''),
+('451608997138', 'E41191280', 'Kos Bu Eni', 'Jember', 'putra', 400000, '6536121.jpg', '9206702.jpg', '2266223.jpg', '\r\nSeiring berjalannya waktu dan berubahnya zaman, sekarang khalayak umum di Indonesia menyebut istilah \"in de kost\" dengan menyingkatnya menjadi \"kost\" saja. Di mana-mana, terutama di berbagai daerah di Indonesia, sentra pendidikan tumbuh berjamuran, terutama akademi dan universitas swasta. Hal ini diikuti dengan bertambahnya jumlah rumah-rumah atau bangunan khusus yang menawarkan jasa \"kost\" bagi para pelajar/mahasiswa yang membutuhkannya. Jasa ini tidaklah gratis, yaitu dengan melibatkan sejumlah pembayaran tertentu untuk setiap periode, yang biasanya dihitung per bulan atau per minggu. Hal ini berbeda dengan kontrak rumah, karena umumnya \"kost\" hanya menawarkan sebuah kamar untuk ditinggali. Setelah melakukan transaksi pembayaran barulah seseorang dapat menumpang hidup di tempat yang dia inginkan.', '1', '1', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -118,7 +131,9 @@ CREATE TABLE `rate` (
 --
 
 INSERT INTO `rate` (`id_pemilik`, `id_user`, `id_kos`, `rate`) VALUES
-('E41191280', '5fd5d0da6946e', '771608879022', 4);
+('E41191280', '5fd5d0da6946e', '771608879022', 4),
+('E41191280', '5fe2d1494cbf1', '451608997138', 5),
+('E41191280', '5fd5d0da6946e', '451608997138', 4);
 
 -- --------------------------------------------------------
 
