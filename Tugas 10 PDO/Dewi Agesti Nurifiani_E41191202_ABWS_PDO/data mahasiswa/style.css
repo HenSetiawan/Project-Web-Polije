@@ -1,0 +1,35 @@
+.data {
+    background: #87D1D8;
+    padding:  0.1px;
+    text-align: center;
+    color: blue
+   
+} 
+
+.edit {
+    text-align: center;
+    color: blue
+}
+
+.table{
+    text-align: center;
+}
+
+.b {
+    text-align: center;
+    color: blue;
+    padding: 0px;
+
+}
+.tombol {
+    text-align: center;
+    color: blue
+}
+.nama {
+    text-align: center;
+    color: blue;
+}
+.b{
+    text-align: center;
+    color: blue;
+}
