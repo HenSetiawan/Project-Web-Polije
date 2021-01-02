@@ -16,6 +16,13 @@
             return $this->db->getAllData();
         }
 
+
+        public function searchKos($key)
+        {
+            $this->db->query("SELECT * FROM `kos_kosan` WHERE nama_kos LIKE '%$key%' OR alamat LIKE '%$key%'");
+            return $this->db->getAllData();
+        }
+
         public function getDetailKos($data)
         {
             $this->db->query("SELECT * FROM kos_kosan WHERE id_kos = '$data'");

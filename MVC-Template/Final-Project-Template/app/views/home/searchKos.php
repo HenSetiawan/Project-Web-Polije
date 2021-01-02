@@ -1,26 +1,4 @@
-
-<div class="row justify-content-md-center main-header ">
-  <div class="col-md-6">
-    <h2 class="title-cari">Mau cari kos di Bondowoso?</h1>
-    <p class="text-secondary ">Dapatkan infonya dan langsung sewa di KosKosang</p>
-
-      <div class="input-group mt-5 mb-3 border main-search">
-      <div class="input-group-prepend">
-        <i class="fas fa-search text-secondary pl-2 icon-search"></i>
-      </div>
-      <input type="text" class="keyword-input pl-3" placeholder="masukan nama atau alamat" autocomplete="off" autofocus data-url="<?=BASEURL;?>">
-    </div>
-
-  </div>
-  <div class="col-md-6">
-    <img src="<?=BASEURL;?>/public/image/house.svg" alt="house" class="img-fluid" width="600">
-  </div>
-</div>
-
-
-
-<div class="row mt-5 view-data-kos">
-  <?php
+<?php
   if($data['dataKos']!=null){
    foreach($data['dataKos'] as $dataKos){ ?>
     <div class="col-md-3 mb-3">
@@ -37,5 +15,3 @@
         </a>
   </div>
 <?php  }} ?>
-</div>
-

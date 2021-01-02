@@ -88,5 +88,15 @@ class Home extends Controller {
             header("Location:" . BASEURL . "/home/detail/" . $id);
         }
     }
+
+
+    public function search($key=null)
+    {
+        $KoskosanModel=$this->model('home','KosKosanModel');
+        $data['dataKos']=$KoskosanModel->searchKos($key);
+
+
+        $this->views('home/searchKos', $data);
+    }
     
 }

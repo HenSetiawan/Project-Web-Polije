@@ -29,6 +29,7 @@
 </div>
 
 <script src="<?=BASEURL;?>/public/js/bootstrap.js"></script>
+<script src="<?=BASEURL;?>/public/javascript/search.js"></script>
 
 </body>
 </html>
