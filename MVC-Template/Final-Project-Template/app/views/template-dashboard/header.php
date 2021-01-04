@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -19,7 +20,7 @@
   <link rel="stylesheet" href="<?= BASEURL; ?>/public/sb-admin/css/sb-admin-2.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css">
   <link rel="icon" href="<?=BASEURL;?>/public/image/admin.png">
-
+  <link rel="stylesheet" href="<?=BASEURL;?>/public/css/text.css">
 </head>
 
 <body id="page-top">
