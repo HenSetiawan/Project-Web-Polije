@@ -12,6 +12,7 @@
             }
             $data['dataAdmin']=$LoginModel->getDataAdmin();
             $data['dataKos']=$KoskosanModel->getAllDataKos();
+            $data['jumlah']=$KoskosanModel->getCountData();
 
             $this->views('template-dashboard/header',$data);
             $this->views('dashboard/index',$data);
