@@ -57,6 +57,7 @@
                         </div>
                         <button class="btn btn-primary btn-user btn-block" name="submit">Reset Password</button>
                     </form>
+                    <center><a href="<?=BASEURL;?>/mitra/login" class="text-secondary small">Kembali Ke Halaman Awal</a></center>
                 </div>
             </div>
         </div>

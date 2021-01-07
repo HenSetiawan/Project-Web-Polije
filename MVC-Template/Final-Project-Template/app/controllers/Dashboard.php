@@ -68,9 +68,44 @@
 
         }
 
+        public function user()
+        {
+            $LoginModel=$this->model('dashboard','LoginModel');
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
+
+            $userModelClass = $this->model("dashboard","UserModel");
+            $data['user'] = $userModelClass->getAllDataUsers();
+
+            $data['dataAdmin']=$LoginModel->getDataAdmin();
+
+            $this->views('template-dashboard/header',$data);
+            $this->views('dashboard/user',$data);
+            $this->views('template-dashboard/footer');
+        }
+
+        public function deleteDataUser($id)
+        {
+            $LoginModel=$this->model('dashboard','LoginModel');
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
+
+            $userModelClass = $this->model("dashboard", "UserModel");
+            if($userModelClass->deleteDataUser($id) == 1){
+                header("Location:" . BASEURL . "/dashboard/user");
+            }
+
+        }
+
 
         public function createOrUpdateMitra()
         {
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
+
             $mitraModelClass = $this->model("dashboard","MitraModel");
             if(isset($_POST['submitMitra'])){
                 $mitraModelClass->insertDataMitra($_POST);
@@ -90,6 +125,7 @@
             if(!isset($_SESSION['loginAdmin'])){
                 header("Location:".BASEURL."/dashboard/login");
             }
+
             $mitraModelClass = $this->model("dashboard","MitraModel");
             $mitraModelClass->deleteMitra($id);
             $baseUrl=BASEURL;
@@ -129,6 +165,13 @@
         {
             $BlogModel=$this->model('dashboard', 'BlogModel');
             $LoginModel=$this->model('dashboard','LoginModel');
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
+
+            if(!isset($_SESSION['loginAdmin'])){
+                header("Location:".BASEURL."/dashboard/login");
+            }
 
             $data['dataAdmin']=$LoginModel->getDataAdmin();
 
@@ -139,6 +182,20 @@
 
         }
 
+        public function deleteJudulBlog($id)
+        {
+         
+            if (is_null($id)) {
+                header("Location:" . BASEURL . "/dashboard/blog");    
+            }
+
+            $BlogModel = $this->model('dashboard', 'BlogModel');
+
+            if ($BlogModel->deleteJudulBlog($id) == 0) {
+                header("Location:" . BASEURL . "/dashboard/blog");
+            }
+
+        }
 
     }
 

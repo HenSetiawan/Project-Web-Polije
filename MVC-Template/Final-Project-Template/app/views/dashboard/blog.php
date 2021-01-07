@@ -48,13 +48,9 @@
                           <td><?= $data['judul']; ?></td>
                           <td><?= $data['tanggal']; ?></td>
                           <td><img src="<?= BASEURL . '/public/blogs/' . $data['foto'] ?>"  width="50px" height="50px"></td>
-                          <td><?= $data['tulisan']; ?></td>
+                          <td class="small"><p><?= $data['tulisan']; ?></p></td>
                           <td>
-                            <button class="btn btn-sm btn-danger btn-block btn-delete-kos"
-                            data-url="<?=BASEURL; ?>/mitra/deletedatakosbyid"
-                            data-id="<?=$dataKos['id_kos'] ?>"
-
-                            >Hapus</button>
+                            <button class="btn btn-sm btn-danger btn-delete-mitra" data-url="<?=BASEURL;?>/dashboard/deleteJudulBlog/<?=$data['id_blog']; ?>">Hapus</button>
                           </td>
                         </tr>
                       <?php }} ?>
@@ -85,7 +81,8 @@
                   </div>
                   <div class="col-md-4">
                     <label for="alamat-kos">Tanggal</label>
-                    <input type="text" name="tanggal" id="alamat-kos" class="form-control" value="<?= date("Y-m-d H:i:s"); ?>" readonly required>
+                    <input type="text" name="tanggal" id="alamat-kos" class="form-control" value="<?= 
+                    date_default_timezone_set('Asia/Jakarta'); echo date("Y-m-d H:i:s"); ?>" readonly required>
                   </div>
                   <div class="col-md-2">
                       <label for="foto">Foto</label>
