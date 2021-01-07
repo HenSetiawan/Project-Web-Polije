@@ -82,7 +82,7 @@
                   <div class="col-md-4">
                     <label for="alamat-kos">Tanggal</label>
                     <input type="text" name="tanggal" id="alamat-kos" class="form-control" value="<?= 
-                    date_default_timezone_set('Asia/Jakarta'); echo date("Y-m-d H:i:s"); ?>" readonly required>
+                    gmdate('d-m-Y H:i:s', time() + (60 * 60 * 7)); ?>" readonly required>
                   </div>
                   <div class="col-md-2">
                       <label for="foto">Foto</label>
