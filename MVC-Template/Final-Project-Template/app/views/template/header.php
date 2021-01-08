@@ -32,7 +32,7 @@
                 <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Sejarah</a>
                 <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
                 <?php if(!isset($_SESSION['loginUser'])){ ?>
-                    <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>
+                    <a class="nav-link text-light rounded-pill bg-success btn-login ml-5" href="<?=BASEURL;?>/login">Masuk</a><br>
                 <?php } ?>
             </div>
         </div>

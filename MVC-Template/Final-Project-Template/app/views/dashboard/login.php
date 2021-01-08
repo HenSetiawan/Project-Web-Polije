@@ -36,10 +36,14 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
+<<<<<<< HEAD
+                    <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+=======
                     
                     <div class="col-lg-6 d-none d-lg-block">
                         <img src="../public/image/logo2.png" style="width:100%;">
                     </div>
+>>>>>>> b0f5ce304ae5aff8b7460de9be7a752b677c282d
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">

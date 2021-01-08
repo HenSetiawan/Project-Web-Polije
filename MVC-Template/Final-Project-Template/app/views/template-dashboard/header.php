@@ -75,7 +75,7 @@
 
             <!-- Nav Item - Tables -->
         <li class="nav-item">
-        <a class="nav-link" href="<?=BASEURL;?>/dashboard/mitra">
+        <a class="nav-link" href="<?=BASEURL;?>/dashboard/user">
         <i class="fas fa-users"></i>
           <span>User</span>
         </a>
@@ -159,7 +159,6 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?=BASEURL?>/dashboard/logout">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout

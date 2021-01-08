@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="<?= BASEURL; ?>/public/sb-admin/css/sb-admin-2.min.css">
-
+    <link rel="icon" href="<?=BASEURL;?>/public/image/owner.png">
 </head>
 
 <body class="bg-gradient-primary">
@@ -57,6 +57,7 @@
                         </div>
                         <button class="btn btn-primary btn-user btn-block" name="submit">Reset Password</button>
                     </form>
+                    <center><a href="<?=BASEURL;?>/mitra/login" class="text-secondary small">Kembali Ke Halaman Awal</a></center>
                 </div>
             </div>
         </div>
