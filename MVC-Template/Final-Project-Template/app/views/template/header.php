@@ -28,11 +28,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
-                <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
-                <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
+                <a class="nav-link text-dark mr-2" href="<?=BASEURL;?>/home">Beranda</a>
+                <a class="nav-link text-dark mr-2" href="<?=BASEURL;?>/blog">Blog</a>
+                <a class="nav-link text-dark mr-2" href="<?=BASEURL;?>/about">Tentang</a><br>
                 <?php if(!isset($_SESSION['loginUser'])){ ?>
-                    <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>
+                    <a class="nav-link text-light rounded-pill bg-success btn-login ml-5" href="<?=BASEURL;?>/login">Masuk</a><br>
                 <?php } ?>
             </div>
         </div>

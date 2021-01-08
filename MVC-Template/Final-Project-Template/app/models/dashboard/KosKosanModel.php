@@ -18,7 +18,7 @@
 
         public function getCountData()
         {
-            $query = "SELECT COUNT(A.id_kos) AS kos_kosan, COUNT(B.id_pemilik) AS pemilik_kos, COUNT(C.id_user) AS user FROM kos_kosan A, pemilik_kos B, user C";
+            $query = "SELECT COUNT(*) AS kos_kosan, (SELECT COUNT(*) FROM user) AS user, (SELECT COUNT(*) FROM pemilik_kos) AS pemilik_kos FROM kos_kosan";
             $this->db->query($query);
             return $this->db->getData();
         }

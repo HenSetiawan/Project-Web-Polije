@@ -59,4 +59,36 @@
             $this->db->query("SELECT * FROM blog");
             return $this->db->getAllData();
         }
+
+        public function getAllDataBlogLimit()
+        {
+            $this->db->query("SELECT judul, id_blog FROM blog LIMIT 0, 5");
+            return $this->db->getAllData();
+        }
+
+        public function getDataBlogByid($id)
+        {
+            $this->db->query("SELECT * FROM blog WHERE id_blog = '$id'");
+            $data = $this->db->getData();
+
+            if ($id != $data['id_blog']) {
+                return 0;
+            }
+
+            return $data;
+        }
+
+        public function deleteJudulBlog($data)
+        {
+            $this->db->query("SELECT * FROM blog WHERE id_blog = '$data'");
+            $dataBlog = $this->db->getData();
+            
+            if ($data != $dataBlog['id_blog']) {
+                return 0;
+            }
+
+            unlink('./public/blogs/'.$dataBlog['foto']);
+
+            $this->db->query("DELETE FROM blog WHERE id_blog = '$data'");
+        }
     }
