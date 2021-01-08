@@ -12,6 +12,7 @@
             }
             $data['dataAdmin']=$LoginModel->getDataAdmin();
             $data['dataKos']=$KoskosanModel->getAllDataKos();
+            $data['jumlah']=$KoskosanModel->getCountData();
 
             $this->views('template-dashboard/header',$data);
             $this->views('dashboard/index',$data);
@@ -111,15 +112,34 @@
         public function blog()
         {
             $LoginModel=$this->model('dashboard','LoginModel');
+            $BlogModel=$this->model('dashboard', 'BlogModel');
             if(!isset($_SESSION['loginAdmin'])){
                 header("Location:".BASEURL."/dashboard/login");
             }
+
             $data['dataAdmin']=$LoginModel->getDataAdmin();
+            $data['blog']=$BlogModel->getDataBlog($data['dataAdmin']['id_admin']);
 
             $this->views('template-dashboard/header',$data);
-            $this->views('dashboard/blog');
+            $this->views('dashboard/blog',$data);
             $this->views('template-dashboard/footer');
         }
+
+        public function insertJudulBlog()
+        {
+            $BlogModel=$this->model('dashboard', 'BlogModel');
+            $LoginModel=$this->model('dashboard','LoginModel');
+
+            $data['dataAdmin']=$LoginModel->getDataAdmin();
+
+            if (isset($_POST["judulBlog"])) {
+                $BlogModel->insertJudulBlog($_POST, $_FILES['foto'], $data['dataAdmin']['id_admin']);
+                header("Location:" . BASEURL . "/dashboard/blog");
+            }
+
+        }
+
+
     }
 
 ?>

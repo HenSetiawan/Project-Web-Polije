@@ -23,20 +23,20 @@
       </div>
       <div class="mt-3">
         <center>
-          <p class="btn btn btn-outline-success" style="width: 100%;">Fasilitas</p>
+          <p class="btn btn-success text-text rounded-pill" style="width: 100%;">Fasilitas</p>
         </center>
         <center>
           <?php if ($data['detailKos']['fas1'] == 1): ?>
-              <i class="fa fa-wifi col-md-2 mr-2 ml-1" style="color: #198754;"> Wifi</i>
+              <i class="fa fa-wifi col-md-2 mr-2 text-success"> Wifi</i>
           <?php endif ?>
           <?php if ($data['detailKos']['fas2'] == 1): ?>
-              <i class="fa fa-television col-md-2 mr-2" style="color: #198754;"> Televisi</i>
+              <i class="fa fa-television col-md-2 mr-2 text-success"> Televisi</i>
           <?php endif ?>
           <?php if ($data['detailKos']['fas3'] == 1): ?>
-              <i class="fa fa-bed col-md-2 mr-2" style="color: #198754;"> Kasur</i>
+              <i class="fa fa-bed col-md-2 mr-2 text-success"> Kasur</i>
           <?php endif ?>
           <?php if ($data['detailKos']['fas4'] == 1): ?>
-              <i class="fa fa-bath col-md-3 mr-2" style="color: #198754;"> Kamar Mandi</i>
+              <i class="fa fa-bath col-md-3 mr-2 text-success"> Kamar Mandi</i>
           <?php endif ?>
         </center>
       </div>
@@ -48,7 +48,7 @@
         <i class="fas fa-map-marker-alt location-kos ml-2 mt-3"><span class="pl-1"><?= $data["detailKos"]["alamat"]; ?></span></i>
         <span class="price-kos ml-2 mr-2 mt-3"><?= "Rp. " . $data["detailKos"]["harga"] . " /bln"; ?></span>
         <div>
-           <button type="button" class="btn btn-warning btn-sm rounded-pill badge mt-3" data-toggle="modal" data-target="#exampleModal">
+           <button type="button" class="btn btn-warning btn-sm rounded-pill badge mt-3 text-white" data-toggle="modal" data-target="#exampleModal">
           Beri Penilaian
            </button>
           <i class="fa fa-star ml-2" aria-hidden="true"><span class="text-dark font-weight-bold small ml-1"><?= (string)$data["star"]["rate"]; ?> Stars</span></i>
@@ -57,9 +57,6 @@
           <p class="mt-3 small"><?= $data["detailKos"]["deskripsi"]; ?></p>
         <div class="mt-2">
           <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-success btn-md" style="width: 100%;">Hubungi Pemilik Kos</a>
-        </div>
-        <div class="mt-3">
-          <a href="https://api.whatsapp.com/send?phone=<?= $data['hp']; ?>" class="btn btn-danger btn-md" style="width: 100%;">Booking Kos Sekarang</a>
         </div>
     </div>
 </div>
@@ -79,13 +76,13 @@
           <input type="hidden" name="user" value="<?= $data['user']['id_user']; ?>">
           <input type="hidden" name="pemilik" value="<?= $data['detailKos']['id_pemilik']; ?>">
          <div class="rating">
-          <i class="fa fa-smile-o mr-2" style="font-size:25px; margin-top:5px;" ></i>
+          <i class="fa fa-smile-o mr-2 text-success" style="font-size:25px; margin-top:5px;" ></i>
           <input type="radio" name="star" id="star1" value="5"><label for="star1"></label>
           <input type="radio" name="star" id="star2" value="4"><label for="star2"></label>
           <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
           <input type="radio" name="star" id="star4" value="2"><label for="star4"></label>
           <input type="radio" name="star" id="star5" value="1"><label for="star5"></label>
-          <i class="fa fa-frown ml-2" style="font-size:25px; margin-top:5px;" ></i>
+          <i class="fa fa-frown ml-2 text-danger" style="font-size:25px; margin-top:5px;" ></i>
         </div>
       </div>
       </center>

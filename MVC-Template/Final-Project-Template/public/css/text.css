@@ -1,0 +1,8 @@
+.desc textarea{
+	height: 100px;
+	width: 765px;
+}
+
+@media(max-width: 900px) {
+.desc textarea{width: 320px;}
+}
