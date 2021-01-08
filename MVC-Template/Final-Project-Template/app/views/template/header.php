@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?=BASEURL;?>/public/css/rating.css">
     <link rel="stylesheet" href="<?=BASEURL;?>/public/font-awesome/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="<?=BASEURL;?>/public/image/kos.svg">
+    <link rel="icon" href="<?=BASEURL;?>/public/image/koskosang.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title><?=$data['title']?></title>
 </head>
@@ -21,7 +21,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top col-12">
     <div class="container ml-2">
         <a class="navbar-brand " href="<?=BASEURL;?>/home">
-            <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid" alt="logo" width="160">
+            <img src="<?=BASEURL;?>/public/image/koskosang.png" class="img-fluid" alt="logo" width="160">
         </a>
         <button class="btn-nav btn btn-outline-light ml-5" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link text-dark" href="<?=BASEURL;?>/home">Beranda</a>
-                <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Blog</a>
+                <a class="nav-link text-dark" href="<?=BASEURL;?>/blog">Sejarah</a>
                 <a class="nav-link text-dark" href="<?=BASEURL;?>/about">Tentang</a><br>
                 <?php if(!isset($_SESSION['loginUser'])){ ?>
                     <a class="nav-link text-light rounded-pill bg-success btn-login" href="<?=BASEURL;?>/login">Masuk</a><br>

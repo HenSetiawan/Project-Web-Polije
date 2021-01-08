@@ -40,7 +40,7 @@
        <div class="col-md-4 login-page">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid mt-2">
+                <img src="<?=BASEURL;?>/public/image/koskosang.png" class="img-fluid mt-2">
             </div>
         </div>
 

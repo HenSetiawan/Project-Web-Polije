@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="<?=BASEURL;?>/public/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="<?=BASEURL;?>/public/css/style.css">
     <link rel="stylesheet" href="<?=BASEURL;?>/public/font-awesome/css/all.css">
-    <link rel="icon" href="<?=BASEURL;?>/public/image/kos.svg">
+    <link rel="icon" href="<?=BASEURL;?>/public/image/koskosang.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title><?=$data['title']?></title>
@@ -40,7 +40,7 @@
        <div class="col-md-4 login-page">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?=BASEURL;?>/public/image/kos.svg" class="img-fluid mt-2">
+                <img src="<?=BASEURL;?>/public/image/koskosang.png" class="img-fluid mt-2">
             </div>
         </div>
 
